@@ -1,0 +1,81 @@
+body {
+    font-family: "Open Sans";
+    margin: 0px;
+    padding: 0px;
+}
+
+.header {
+    background-image: url(bino.image/Background.png);
+    position: relative;
+    background-color: #3b3c41;
+    background-size: cover;
+}
+
+.width {
+    margin-bottom: 376px;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+}
+
+.logo {
+    display: inline-block;
+    width: 131px;
+    height: 52px;
+    background-color: black; 
+}
+
+.menu {
+    margin-bottom: 127px;
+    /* padding: 40px 376px 40px 40px; */
+}
+
+.item_block {
+    vertical-align: middle;
+    float: right;
+}
+
+.item {
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 15px;
+    margin-right: 45px;
+    color: white;
+}
+
+.item:hover {
+    color: #e74c3c;
+    transition: 0.9s;
+    opacity: 1;
+}
+
+.item_active {
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 15px;
+    margin-right: 45px;
+}
+
+.item_active:hover {
+    color: #e74c3c;
+    transition: 0.9s;
+    opacity: 1;
+}
+
+.item:last-child {
+    margin: 0px;
+}
+
+.navigator {
+    margin-right: 50px;
+    margin-left: 50px;
+    padding-top: 36px;
+    padding-bottom: 18px;
+    background-color: transparent;
+}
+
+.menu_button {
+    position: relative;
+    display: block;
+}
