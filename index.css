@@ -1,18 +1,21 @@
 body {
-    font-family: "Open Sans";
+    font-family: 'Open Sans', sans-serif;
     margin: 0px;
     padding: 0px;
 }
 
+* {
+    padding: 0;
+    margin: 0;
+}
+
 .header {
     background-image: url(bino.image/Background.png);
-    position: relative;
-    background-color: #3b3c41;
     background-size: cover;
 }
 
+
 .width {
-    margin-bottom: 376px;
     max-width: 1170px;
     margin-left: auto;
     margin-right: auto;
@@ -25,14 +28,13 @@ body {
     height: 52px;
     background-color: black; 
 }
-
+/* 
 .menu {
-    margin-bottom: 127px;
-    /* padding: 40px 376px 40px 40px; */
-}
+    padding-bottom: 265px;
+} */
 
 .item_block {
-    vertical-align: middle;
+    margin: 0 auto;
     float: right;
 }
 
@@ -68,14 +70,105 @@ body {
 }
 
 .navigator {
-    margin-right: 50px;
-    margin-left: 50px;
     padding-top: 36px;
-    padding-bottom: 18px;
     background-color: transparent;
 }
 
 .menu_button {
     position: relative;
     display: block;
+}
+
+.slider_block {
+    padding: 256px 0px 264px 0px;
+}
+
+.slider_content {
+    text-align: center;
+}
+
+.p_slider {
+    padding-bottom: 45px;
+    font-size: 24px;
+    color: #f4f5f9;
+}
+
+.Welcome_Bino {
+    color: #f4f5f9;
+    font-size: 72px;
+}
+
+.pointer {
+    display: inline-block;
+    bottom: -3px;
+    margin-left: -4px;
+    width: 7px;
+    height: 7px;
+    background-color: #e74c3c;
+    border-radius: 50%
+}
+
+.punktir2 {
+    display: inline-block;
+    bottom: 0;
+    width: 80px;
+    height: 1px;
+    background-color: #fff;
+    box-shadow: 116px 0 0 0 #fff;
+}
+
+.text_slider {
+    margin-top: 47px;
+    font-size: 14px;
+    color: #cbc6c0;
+    line-height: 24px;
+}
+
+.button_block {
+    margin-top: 90px;
+    height: 60px;
+}
+
+.button_now {
+    border-radius: 2px;
+    cursor: pointer;
+    font-weight: 700;
+    margin-right: 30px;
+    color: #fff;
+    font-size: 14px;
+    background-color: #e74c3c;
+    padding: 22px 47px 22px 47px;
+}
+
+.button_now:hover {
+    transition: 0.3s;
+    opacity: 0.9;
+    background-color: #e74c3c;
+}
+
+.button_learn {
+    border-radius: 2px;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 22px 69px 22px 69px;
+    height: 52px;
+    border: 1px solid #ffffff;
+}
+
+.button_learn:hover {
+    transition: 0.3s;
+    opacity: 0.9;
+}
+
+.image_anchor {
+    background-image: url(bino.image/Forma_1.png);
+    padding: 17px 22px 20px 16px;
+    border-radius: 50%;
+    background-color: white;
+    width: 22px;
+    height: 31px;
+    position: absolute;
+    left: 50%;
 }
