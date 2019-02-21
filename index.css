@@ -9,37 +9,44 @@ body {
     margin: 0;
 }
 
-.header {
+.navigator {
     background-image: url(bino.image/Background.png);
     background-size: cover;
-}
-
-
-.width {
-    max-width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: transparent;
+    background-position: 50% 50%;
+    height: 105vh;
 }
 
 .logo {
+    margin-left: 50px;
+    cursor: pointer;
+    background-image: url(bino.image/Logo.png);
     display: inline-block;
-    width: 131px;
+    width: 141px;
     height: 52px;
-    background-color: black; 
 }
-/* 
-.menu {
-    padding-bottom: 265px;
-} */
+
+.logo:hover {
+    background-color: #e74c3c;
+    transition: 0.9s;
+}
+
+ .header {
+    padding-top: 40px;
+    max-width: 1700px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+} 
 
 .item_block {
-    margin: 0 auto;
-    float: right;
+    max-width: 1000px;
+    cursor: pointer;
 }
 
 .item {
-    cursor: pointer;
+    padding-bottom: 22px;
     color: #ffffff;
     font-size: 15px;
     margin-right: 45px;
@@ -47,31 +54,17 @@ body {
 }
 
 .item:hover {
+    border-bottom: 1px solid  #e74c3c; 
     color: #e74c3c;
-    transition: 0.9s;
-    opacity: 1;
 }
 
-.item_active {
-    cursor: pointer;
-    color: #ffffff;
-    font-size: 15px;
-    margin-right: 45px;
-}
 
 .item_active:hover {
     color: #e74c3c;
-    transition: 0.9s;
-    opacity: 1;
 }
 
 .item:last-child {
     margin: 0px;
-}
-
-.navigator {
-    padding-top: 36px;
-    background-color: transparent;
 }
 
 .menu_button {
@@ -79,16 +72,13 @@ body {
     display: block;
 }
 
-.slider_block {
-    padding: 256px 0px 264px 0px;
-}
-
 .slider_content {
+    padding: 256px 0px 140px 0px;
     text-align: center;
 }
 
 .p_slider {
-    padding-bottom: 45px;
+    margin-bottom: 45px;
     font-size: 24px;
     color: #f4f5f9;
 }
@@ -96,25 +86,25 @@ body {
 .Welcome_Bino {
     color: #f4f5f9;
     font-size: 72px;
+    margin-bottom: 48px;
 }
 
 .pointer {
+    cursor: pointer;
+    margin: 0px 14px 0px 14px;
     display: inline-block;
-    bottom: -3px;
-    margin-left: -4px;
     width: 7px;
     height: 7px;
     background-color: #e74c3c;
     border-radius: 50%
 }
 
-.punktir2 {
-    display: inline-block;
-    bottom: 0;
+hr {
+    margin-top: 2px;
     width: 80px;
-    height: 1px;
+    display: inline-block;
+    height: 0.5px;
     background-color: #fff;
-    box-shadow: 116px 0 0 0 #fff;
 }
 
 .text_slider {
@@ -161,14 +151,117 @@ body {
     transition: 0.3s;
     opacity: 0.9;
 }
-
-.image_anchor {
-    background-image: url(bino.image/Forma_1.png);
-    padding: 17px 22px 20px 16px;
+    
+.anchor_block {
+    box-shadow: 10px #e74c3c;
+    padding: 17px 22px 17px 22px;
     border-radius: 50%;
-    background-color: white;
+    background-color: #f4f5f9;
     width: 22px;
     height: 31px;
     position: absolute;
     left: 50%;
 }
+
+.conteiner_2 {
+    padding: 80px 0px 112px 0px;
+    border-bottom: 1px solid #e6e6e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 141px;
+
+}
+
+.img_conteiner_2 {
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.img1 {
+    text-align: center;
+ 
+    background-image: url(bino.image/1.png);
+    background-repeat: no-repeat; 
+    text-align: center;
+    background-position: center;
+    width: 32px;
+    height: 32px;
+}
+
+.img2 {
+    display: inline-block;  
+    background-image: url(bino.image/2.png);
+    background-repeat: no-repeat; 
+    text-align: center;
+    background-position: center;
+    width: 32px;
+    height: 32px;
+}
+
+.img3 {
+    background-image: url(bino.image/3.png);
+    background-repeat: no-repeat; 
+    text-align: center;
+    background-position: center;
+    width: 32px;
+    height: 32px;
+}
+
+.img4 {
+    background-image: url(bino.image/4.png);
+    background-repeat: no-repeat; 
+    text-align: center;
+    background-position: center;
+    width: 32px;
+    height: 32px;
+}
+
+.tittle {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #6a6a6a;
+    text-align: center;
+}
+
+.animation_block {
+    padding-top: 50px;
+    margin-right: 40px;
+    max-width: 250px;
+    display: inline-block;
+    position: relative;
+}
+
+.animation_block:last-child {
+    margin-right: 0px;
+}
+
+
+.p_conteiner_2 {
+    font-size: 12px;
+    color: #999999;
+    text-align: center;
+}
+
+.border {
+    transition: .5s;
+    left: 33%;
+    bottom: 53%;
+    width: 71px;
+    height: 71px;
+    position: absolute;
+    border: 1px solid #e6e6e6;
+}
+
+.red:hover .tittle {color: #e74c3c}
+.red:hover .border {transform: rotate(50deg); border: 1px solid #e74c3c;  width: 61px; height: 61px; left: 35%; bottom: 54%};
+
+
+
+
+
+
