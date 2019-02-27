@@ -426,34 +426,26 @@ hr {
 }
 
 .icon {
-    position: absolute;
-    top: 34.7%;
-    left: 106.7%;
-    z-index: 50;
+    margin-top: 20px;
+    margin-left: 18px;
     background-image: url(bino.image/komp.png);
     background-repeat: no-repeat;
-    width: 32px;
+
     height: 32px;
 }
 
 .icon2 {
-    position: absolute;
-    top: 61%;
-    left: 106.5%;
-    z-index: 50;
+    margin-top: 20px;
+    margin-left: 17px;
     background-repeat: no-repeat;
     background-image: url(bino.image/kniga.png);
-    width: 32px;
     height: 32px;
 }
 
 .icon3 {
-    position: absolute;
-    top: 88%;
-    left: 106.8%;
-    z-index: 50;
+    margin-top: 20px;
+    margin-left: 19px;
     background-repeat: no-repeat;
     background-image: url(bino.image/camera.png);
-    width: 32px;
     height: 32px;
 }
