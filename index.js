@@ -1,5 +1,5 @@
 var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-const header_top = document.getElementById('header_top')
+const header_top = document.getElementById('header_top').addEventListener("")
 
 function vanya () {
     if (scrollTop > 820) {
@@ -12,5 +12,6 @@ function vanya () {
         header_top.style.opacity = "0";
     }
 };
+
 vanya();
 

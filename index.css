@@ -17,7 +17,6 @@ body {
 }
 
 .logo {
-    margin-left: 50px;
     cursor: pointer;
     background-image: url(bino.image/Logo.png);
     display: inline-block;
@@ -32,9 +31,8 @@ body {
 
  .header {
     position: relative;
-    padding-top: 40px;
+    padding: 40px 40px 40px 40px;
     max-width: 1700px;
-    width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -138,8 +136,8 @@ hr {
 }
 
 .button_now:hover {
-    transition: 0.3s;
-    opacity: 0.9;
+    transition: 0.6s;
+    opacity: 0.8;
     background-color: #e74c3c;
 }
 
@@ -155,8 +153,8 @@ hr {
 }
 
 .button_learn:hover {
-    transition: 0.3s;
-    opacity: 0.9;
+    transition: 0.5s;
+    opacity: 0.6;
 }
 
 .header_top {
@@ -191,6 +189,7 @@ hr {
 }
 
 .anchor_block {
+    cursor: pointer;
     top: 100%;
     transform: translate(-50%, -50%);
     box-shadow: 10px #e74c3c;
@@ -297,7 +296,7 @@ hr {
 }
 
 .red:hover .tittle {color: #e74c3c}
-.red:hover .border {transform: rotate(46deg); border: 1px solid #e74c3c; cursor: pointer; width: 61px; height: 61px; left: 35%; bottom: 54%};
+.red:hover .border {transform: rotate(45deg); border: 1px solid #e74c3c; cursor: pointer; width: 61px; height: 61px; left: 35%; bottom: 54%};
 
 .history_content2 {
     vertical-align: top;
@@ -362,22 +361,27 @@ hr {
   
 }
 
-.button_history:hover {
-    transition: 0.3s;
-    opacity: 0.9;
+.button_block_history:hover {
+    transition: 0.8s;
+    cursor: pointer;
+    opacity: 0.8;
     background-color: #e74c3c;
 }
 
-
  .history_img {
-    min-height: 406px;
-    min-width: 530px; 
-    width: 50%;
-    height: 42%;
-    background-position: center center;  
-    background-image: url(bino.image/Monitor.png);
-    background-repeat: no-repeat; 
+    position: relative;
+    text-align: center;
+    margin-right: 50px;
+    margin-left: 50px;
 } 
+
+.history_img:before {
+    content:'';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+}
 
 .container3 {
     padding-top: 121px;
