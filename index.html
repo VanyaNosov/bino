@@ -5,6 +5,12 @@
         <link rel="stylesheet" href="index.css">
     </head>
         <body>
+                <!-- <script>
+                        'use strict';
+                        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                        
+                        alert( "Текущая прокрутка: " + scrollTop );
+                </script>         -->
             <div class = "navigator">   
                 <div class = "header">
                     <div class = "logo">
@@ -42,6 +48,28 @@
                           <a class = "button_learn">LEARN MORE</a>                                   
                       </div>      
                 </div>
+
+                <div class = "header_top" id = "header_top">
+                        <div class = "logo">
+                            <div class = "block_logo"></div>
+                        </div>
+    
+                    <div class = "item_block">
+                        <a class="item_top">HOME</a>
+    
+                        <a href = "#container3" class="item_top">ABOUT US</a>
+                            
+                        <a  href = "#navigator" class="item_top">PORTFOLIO</a>
+                            
+                        <a class="item_top">PORTFOLIO</a>
+                            
+                        <a class="item_top">TEAM</a>
+    
+                        <a class="item_top">BLOG</a>
+    
+                        <a class="item_top">CONTACT</a>
+                    </div>  
+                </div>
                                 
                 <div class = "anchor_block">
                     <img src="bino.image/Forma_1.png" class = "image_anchor">
@@ -71,7 +99,12 @@
                     <div class = "border"></div>
 
                     <div class = "img_conteiner_2" >
-                        <div class = "img2"></div>
+                        <object class = "img2">           
+                            <img src = "bino.image/2.svg">
+                        </object>
+                        
+                        
+                        <!-- <div class = "img2"></div> -->
                     </div>
                                 
                     <h4 class = "tittle">CLEAN CODE</h4>
@@ -160,5 +193,6 @@
                      been the industry's standard dummy text ever.</p>    
             </div>
         </div>
+        <script src="index.js"></script>
     </body>
 </html>     

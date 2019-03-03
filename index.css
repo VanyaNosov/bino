@@ -31,6 +31,7 @@ body {
 }
 
  .header {
+    position: relative;
     padding-top: 40px;
     max-width: 1700px;
     width: 100%;
@@ -157,7 +158,38 @@ hr {
     transition: 0.3s;
     opacity: 0.9;
 }
-    
+
+.header_top {
+    z-index: 50;
+    top: -92%;
+    position: fixed;
+    transition: 0.9;
+    opacity: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #202020;
+}
+  
+.item_top {
+    text-decoration: none; 
+    padding-bottom: 15px;
+    color: #ffffff;
+    font-size: 15px;
+    margin-right: 45px;
+    color: #f4f5f9;
+}
+
+.item_top:hover {
+    transition: 0.6s;
+    border-bottom: 1px solid  #e74c3c; 
+    color: #e74c3c;
+}
+
 .anchor_block {
     top: 100%;
     transform: translate(-50%, -50%);
@@ -199,13 +231,14 @@ hr {
 }
 
 .img2 {
+    fill: #e74c3c;
     display: inline-block;  
-    background-image: url(bino.image/2.png);
-    background-repeat: no-repeat; 
+    /* background-image: url(bino.image/2.svg); */
+    /* background-repeat: no-repeat; 
     text-align: center;
     background-position: center;
     width: 32px;
-    height: 32px;
+    height: 32px; */
 }
 
 .img3 {
@@ -344,7 +377,6 @@ hr {
     background-position: center center;  
     background-image: url(bino.image/Monitor.png);
     background-repeat: no-repeat; 
-
 } 
 
 .container3 {
