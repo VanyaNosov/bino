@@ -163,7 +163,7 @@ hr {
     z-index: 50;
     top: -92%;
     position: fixed;
-    transition: 0.9;
+    transition: 0.7s;
     opacity: 0;
     padding-top: 5px;
     padding-bottom: 5px;
