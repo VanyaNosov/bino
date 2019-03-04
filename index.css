@@ -158,14 +158,16 @@ hr {
 }
 
 .header_top {
+    padding: 40px 40px 40px 40px;
     z-index: 50;
     top: -92%;
     position: fixed;
     transition: 0.7s;
     opacity: 0;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 5px 30px 5px 40px;
+    /* width: 96.5%; */
     width: 100%;
+
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -178,7 +180,7 @@ hr {
     padding-bottom: 15px;
     color: #ffffff;
     font-size: 15px;
-    margin-right: 45px;
+    margin-right: 40px;
     color: #f4f5f9;
 }
 
@@ -188,6 +190,7 @@ hr {
     color: #e74c3c;
 }
 
+
 .anchor_block {
     cursor: pointer;
     top: 100%;
@@ -196,8 +199,8 @@ hr {
     padding: 17px 22px 17px 22px;
     border-radius: 50%;
     background-color: #f4f5f9;
-    width: 22px;
-    height: 31px;
+    width: 70px;
+    height: 70px;
     position: absolute;
     left: 50%;
 }
@@ -285,7 +288,7 @@ hr {
     text-align: center;
 }
 
-.border {
+.animation {
     transition: .5s;
     left: 33%;
     bottom: 53%;
@@ -296,7 +299,7 @@ hr {
 }
 
 .red:hover .tittle {color: #e74c3c}
-.red:hover .border {transform: rotate(45deg); border: 1px solid #e74c3c; cursor: pointer; width: 61px; height: 61px; left: 35%; bottom: 54%};
+.red:hover .animation {transform: rotate(45deg); border: 1px solid #e74c3c; cursor: pointer; width: 61px; height: 61px; left: 35%; bottom: 54%};
 
 .history_content2 {
     vertical-align: top;
@@ -305,18 +308,24 @@ hr {
 
 .history_block {
     max-width: 1230px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: space-between; 
+    height: 600px;
+}
+
+.history_block:before {
+    content:'';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    width: 0px;
 }
 
 .block {
     display: inline-block;
     width: 50%;
     max-width: 650px;
+    vertical-align: middle;
 }
-
+ 
 .history_tittle {
     padding-left: 34px;
     margin-bottom: 50px;
@@ -358,7 +367,6 @@ hr {
     color: #fff;
     font-size: 14px;
     background-color: #e74c3c;
-  
 }
 
 .button_block_history:hover {
@@ -369,19 +377,14 @@ hr {
 }
 
  .history_img {
+    display: inline-block;
+    vertical-align: middle;
     position: relative;
     text-align: center;
+    height: min-content;
     margin-right: 50px;
     margin-left: 50px;
 } 
-
-.history_img:before {
-    content:'';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-    margin-right: -0.25em;
-}
 
 .container3 {
     padding-top: 121px;
@@ -389,7 +392,7 @@ hr {
 }  
 
 .SERVICES_CONTAINER {
-    position: relative;
+
     padding-top: 155px;
     padding-bottom: 155px;
     width: 100%;
@@ -401,14 +404,14 @@ hr {
 }
 
 .services_text {
-    position: relative;
+
     width: 50%;
     display: inline-block;
 }
 
 
 .tittle_services {
-    position: relative;
+    white-space: normal;
     border-right: 7px solid #e74c3c;
     padding-right: 30px;
     text-align: right;
@@ -420,6 +423,7 @@ hr {
 }
 
 .tittle_text_services {
+
     margin-bottom: 19px;
     text-align: right;
     color: #e74c3c;
@@ -430,16 +434,11 @@ hr {
 }
 
 .text_services {
-    margin-bottom: 65px;
     text-align: right;
     font-size: 13px;
     font-weight: 400;
     line-height: 29px;  
     color: #999999;
-}
-
-.text_services:last-child {
-    margin-bottom: 0px;
 }
 
 .icon_block_services {
@@ -448,11 +447,22 @@ hr {
     top: 30%;
 }
 
+.block_textt {
+    position: relative;
+    margin-bottom: 65px;
+}
+
+.block_textt:last-child {
+    margin-bottom: 0px;
+}
+
 .icon_block {
+    cursor: pointer;
+    left: 104%;
+    position: absolute;
     border: 4px solid #585858;
     border-radius: 50%;
     background-color: #f4f5f9;
-    margin-bottom: 80px;
     width: 64px;
     height: 64px;
 }
@@ -485,3 +495,4 @@ hr {
     background-image: url(bino.image/camera.png);
     height: 32px;
 }
+
