@@ -392,7 +392,7 @@ hr {
 }  
 
 .SERVICES_CONTAINER {
-
+    margin-bottom: 135px;
     padding-top: 155px;
     padding-bottom: 155px;
     width: 100%;
@@ -404,7 +404,6 @@ hr {
 }
 
 .services_text {
-
     width: 50%;
     display: inline-block;
 }
@@ -423,7 +422,6 @@ hr {
 }
 
 .tittle_text_services {
-
     margin-bottom: 19px;
     text-align: right;
     color: #e74c3c;
@@ -495,4 +493,72 @@ hr {
     background-image: url(bino.image/camera.png);
     height: 32px;
 }
+
+.RECENT_WORKS_Container {
+    text-align: center;
+}
+
+.info_block {
+    margin-bottom: 50px; 
+}
+
+.tittle_works {
+    margin-bottom: 29px;
+    color: #6a6a6a;
+    letter-spacing: 3.6px;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.recent_works_p {
+    margin-bottom: 29px;
+    color: #999999;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 29px;
+}
+
+.recent_works_categories {
+    margin-top: 68px;
+}
+
+.button_categories {
+    cursor: pointer;
+    margin-right: 10px;
+    display: inline-block;
+    color: #999999;
+    font-weight: 400;
+    letter-spacing: .018em;
+    font-size: 14px;
+}
+
+.button_categories:hover {
+    color: #e74c3c;
+    transition: 0.8s;
+    font-weight: 700;
+}
+
+.button_categories:last-child {
+    margin-right: 0px; 
+}
+
+.button_line {
+    margin-right: 10px;
+    display: inline-block;
+    font-weight: 700;
+    color: #999999;
+}
+
+.recent_works_img_container {
+    position: relative;
+    top: 60%;
+}
+
+.recent_works_img {
+    max-width: 100%;
+    height: inherit;
+}
+
+
+
 
