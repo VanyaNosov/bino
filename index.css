@@ -13,7 +13,7 @@ body {
     background-image: url(bino.image/Background.png);
     background-size: cover;
     background-position: 50% 50%;
-    height: 100vh;
+    height: calc(100vh - 10px);
 }
 
 .logo {
@@ -233,10 +233,10 @@ hr {
 }
 
 .img2 {
-    fill: #e74c3c;
-    display: inline-block;  
-    /* background-image: url(bino.image/2.svg); */
-    /* background-repeat: no-repeat; 
+    /* fill: #e74c3c;
+    display: inline-block;   */
+    /* background: url(); 
+    background-repeat: no-repeat; 
     text-align: center;
     background-position: center;
     width: 32px;
@@ -307,23 +307,18 @@ hr {
 }
 
 .history_block {
+    max-height: 440px;
     max-width: 1230px;
     height: 600px;
 }
 
-.history_block:before {
-    content:'';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-    width: 0px;
-}
+
 
 .block {
-    display: inline-block;
-    width: 50%;
-    max-width: 650px;
     vertical-align: middle;
+    width: 49%;
+    height: 50%;
+    display: inline-block;
 }
  
 .history_tittle {
@@ -338,19 +333,19 @@ hr {
     max-height: 116px;
     margin-left: -1px;
     margin-bottom: 50px;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 29px;
     letter-spacing: .011em;
     color: #999;
 } 
 
-.text_history:nth-child(1) {
-    margin-bottom: 100px;
-}
+/* .text_history:nth-child(3) {
+    margin-bottom: 0px;
+} */
 
 .button_block_history {
+    margin-top: 50px;
     border-radius: 2px;
-    margin-top: 47px;
     box-shadow: 0 2px 4.75px 0.25px rgba(0,0,0,.25);
     background-color: #e74c3c;
     width: 225px;
@@ -377,19 +372,33 @@ hr {
 }
 
  .history_img {
+    width: 100%;
+    height: 100%;
+    max-height: 407px;
+    max-width: 45%;
     display: inline-block;
     vertical-align: middle;
     position: relative;
     text-align: center;
     height: min-content;
     margin-right: 50px;
-    margin-left: 50px;
 } 
 
 .container3 {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 121px;
     padding-bottom: 135px;
 }  
+
+.container3:before {
+    content:'';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    width: 0px;
+}
 
 .SERVICES_CONTAINER {
     margin-bottom: 135px;
@@ -407,7 +416,6 @@ hr {
     width: 50%;
     display: inline-block;
 }
-
 
 .tittle_services {
     white-space: normal;
@@ -455,6 +463,7 @@ hr {
 }
 
 .icon_block {
+    transition: .5s;
     cursor: pointer;
     left: 104%;
     position: absolute;
@@ -463,6 +472,10 @@ hr {
     background-color: #f4f5f9;
     width: 64px;
     height: 64px;
+}
+
+.icon_block:hover {
+    background-color: #999999;
 }
 
 .icon_block:last-child {
@@ -519,6 +532,7 @@ hr {
 }
 
 .recent_works_categories {
+
     margin-top: 68px;
 }
 
@@ -550,13 +564,22 @@ hr {
 }
 
 .recent_works_img_container {
+    display: block;
     position: relative;
     top: 60%;
+    line-height: 0%;
 }
 
 .recent_works_img {
-    max-width: 100%;
-    height: inherit;
+    cursor: pointer;
+    float: left;
+    margin-left: -.38em;
+}
+
+.recent_works_img::before {
+    content: " ";
+    background-color: #e74c3c;
+    opacity: 0.6;
 }
 
 
