@@ -223,7 +223,6 @@ hr {
 
 .img1 {
     text-align: center;
- 
     background-image: url(bino.image/1.png);
     background-repeat: no-repeat; 
     text-align: center;
@@ -487,7 +486,6 @@ hr {
     margin-left: 18px;
     background-image: url(bino.image/komp.png);
     background-repeat: no-repeat;
-
     height: 32px;
 }
 
@@ -564,23 +562,69 @@ hr {
 }
 
 .recent_works_img_container {
-    display: block;
-    position: relative;
-    top: 60%;
-    line-height: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #e74c3c;
 }
 
 .recent_works_img {
+    max-width: 100%;
+    position: relative; 
     cursor: pointer;
     float: left;
-    margin-left: -.38em;
 }
 
-.recent_works_img::before {
-    content: " ";
-    background-color: #e74c3c;
-    opacity: 0.6;
+.img_works_block {
+    float: left;
+    overflow: hidden;
+    display: inline-block;
+    max-width: 475.7px;
+    width: 100%;
+    position: relative; 
 }
+
+.recent_works_img:hover {
+    opacity: 0.3;
+    transition: 0.4s;
+}
+
+.text_block_works {
+    padding-top: 10px;
+    cursor: pointer;
+    left: 10%;
+    transition: 0s;
+    top: 100%;
+    position: absolute;
+}
+
+.text_block_works:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    border-top: 4px solid #ffffff;
+    content:"";
+}
+
+.img_works_block:hover .text_block_works {
+    transition: 0.8s;
+    top: 78%
+}
+
+.text_works_top {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 21px;
+}
+
+.text_works_bottom {
+    float: left;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+}
+
 
 
 
