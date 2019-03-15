@@ -11,23 +11,23 @@ function vanya () {
     }
 };
 
-let vanyac = document.getElementById('buttom_slider1').onclick = scrollBottom;
-let vanyac2 = document.getElementById('buttom_slider2').onclick = scrollBottom_bottom;
+let buttom_top = document.getElementById('buttom_slider1').onclick = scrollBottom;
+let bottom_bottom = document.getElementById('buttom_slider2').onclick = scrollBottom_bottom;
 
-let bop = 0;
+let scrollValueTop = 0;
 
 function scrollBottom () {
     const vanyacha = document.getElementById('content');
-    bop = bop  - 250;
-    vanyac = vanyacha.style.top = bop + 'px';
+    scrollValueTop = scrollValueTop - 250;
+    buttom_top = vanyacha.style.top = scrollValueTop + 'px';
 }
 
-let bottom = 0;
+let scrollValueButtom = 0;
 
 function scrollBottom_bottom () {
     const vanyacha = document.getElementById('content');
-    bottom = bottom - 250;
-    vanyac2 = vanyacha.style.bottom = bottom + 'px';
+    scrollValueButtom = scrollValueButtom - 250;
+    bottom_bottom = vanyacha.style.bottom = scrollValueButtom + 'px';
 }
 
 
