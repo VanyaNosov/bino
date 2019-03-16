@@ -15,8 +15,8 @@ function vanya () {
 const vanyacha = document.getElementById('content');
 
 let buttom_top1 = document.getElementById('buttom_slider1').addEventListener('click', () =>  changePosition('firstButton'));
-let buttom_top2 = document.getElementById('buttom_slider2').addEventListener('click', () =>  changePosition('lastButton'));
-let buttom_top3 = document.getElementById('buttom_slider3').addEventListener('click', () =>  changePosition('aaaaaButton'));
+let buttom_top2 = document.getElementById('buttom_slider2').addEventListener('click', () =>  changePosition(null, 'lastButton'));
+let buttom_top3 = document.getElementById('buttom_slider3').addEventListener('click', () =>  changePosition(null, null, 'aaaaaButton'));
 
 function changePosition (lastButton, firstButton, aaaaaButton) {
     if (firstButton === 'firstButton') {
