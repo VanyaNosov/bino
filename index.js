@@ -11,24 +11,67 @@ function vanya () {
     }
 };
 
-let buttom_top = document.getElementById('buttom_slider1').onclick = scrollBottom;
-let bottom_bottom = document.getElementById('buttom_slider2').onclick = scrollBottom_bottom;
 
-let scrollValueTop = 0;
+const vanyacha = document.getElementById('content');
 
-function scrollBottom () {
-    const vanyacha = document.getElementById('content');
-    scrollValueTop = scrollValueTop - 250;
-    buttom_top = vanyacha.style.top = scrollValueTop + 'px';
-}
+let buttom_top1 = document.getElementById('buttom_slider1').addEventListener('click', () => {
+    vanyacha.style.top = 0 + 'px';
+    vanyacha.style.top = 0 + 'px';
+});
 
-let scrollValueButtom = 0;
+let buttom_top2 = document.getElementById('buttom_slider2').addEventListener('click', () => {
+    vanyacha.style.top = 0 + 'px';  
+    vanyacha.style.top =  - 500 + 'px';
+});
 
-function scrollBottom_bottom () {
-    const vanyacha = document.getElementById('content');
-    scrollValueButtom = scrollValueButtom - 250;
-    bottom_bottom = vanyacha.style.bottom = scrollValueButtom + 'px';
-}
+let buttom_top3 = document.getElementById('buttom_slider3').addEventListener('click', () => {
+    vanyacha.style.top = 0 + 'px';  
+    vanyacha.style.top =  - 1000  + 'px';
+});
+
+
+
+
+
+
+
+
+
+
+
+
+// let buttom_top = document.getElementById('buttom_slider1').onclick = scrollBottom(0,500);
+// let bottom_bottom = document.getElementById('buttom_slider2').onclick = scrollBottom(1000,0);
+
+
+// function scrollBottom (first,last) {
+//     const vanyacha = document.getElementById('content');
+//     last = 500;
+//     first = 1000;
+
+//     if(last) {
+//         vanyacha.style.bottom = last + 'px';
+//     }
+
+//     if() {
+//         vanyacha.style.bottom = first + 'px';
+// }
+
+// let scrollValueTop = 0;
+
+// function scrollBottom () {
+//     const vanyacha = document.getElementById('content');
+//     scrollValueTop = scrollValueTop - 250;
+//     buttom_top = vanyacha.style.top = scrollValueTop + 'px';
+// }
+
+// let scrollValueButtom = 0;
+
+// function scrollBottom_bottom () {
+//     const vanyacha = document.getElementById('content');
+//     scrollValueButtom = scrollValueButtom - 250;
+//     bottom_bottom = vanyacha.style.bottom = scrollValueButtom + 'px';
+// }
 
 
 

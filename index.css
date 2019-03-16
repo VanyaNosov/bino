@@ -485,6 +485,7 @@ hr {
 }
 
 .contentch {
+    top: 0;
     transition: 0.4s;
     position: relative;
 }
