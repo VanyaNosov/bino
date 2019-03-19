@@ -1,4 +1,5 @@
 body {
+    background-color: #f4f5f9;;
     font-family: 'Open Sans', sans-serif;
     margin: 0px;
     padding: 0px;
@@ -315,8 +316,8 @@ hr {
 
 .block {
     width: 50%;
-    height: 50%;
     display: inline-block;
+    vertical-align: middle;
 }
  
 .history_tittle {
@@ -366,6 +367,7 @@ hr {
 }
 
 .monitor_block {
+    vertical-align: middle;
     width: 50%;
     max-width: 47%;
     display: inline-block
@@ -381,12 +383,11 @@ hr {
 } 
 
 .container3 {
-    max-height: 500px;
     max-width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 121px;
-    padding-bottom: 135px;
+    height: 694px;
+    margin: 0 auto;
+    padding: 30px 0px 30px 0px;
+    box-sizing: border-box
 }  
 
 .container3:before {
@@ -568,10 +569,13 @@ hr {
 }
 
 .RECENT_WORKS_Container {
+    position: relative;
+    margin-bottom: 150px;
     text-align: center;
 }
 
 .info_block {
+    text-align: center;
     margin-bottom: 50px; 
 }
 
@@ -623,10 +627,11 @@ hr {
 }
 
 .recent_works_img_container {
-    position: absolute;
+    
     width: 100%;
     background-size: cover;
     background-color: #e74c3c;
+    margin-bottom: 150px;
 }
 
 .recent_works_img {
@@ -693,10 +698,143 @@ hr {
 .img_cont32 {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 85.7%;
 }
 
+.Case_Study_Container {
+    position: relative;
+}
 
+.tittle_study {
+    margin-bottom: 29px;
+    color: #6a6a6a;
+    letter-spacing: 3.6px;
+    font-size: 36px;
+    font-weight: 700;
+}
 
+.study_container_slider {
+    background-image: url(bino.image/Put_Your_Image.png);
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: 50% 100%;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 69px;
+    padding-top: 46px;
+    height: 600px;
+    padding-bottom: 44px;
+}
 
+.slider_study {
+    display: inline-block;
+    width: 55%;
+    height: 100%;
+    z-index: 50;
+    margin-right: 5px;
+    background-color: #fff;
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.1);
+}
 
+.slider_img_block {
+    position: absolute;
+    display: inline-block;
+    transform: rotate(45deg);
+    width: 91px;
+    height: 91px;
+    background-color: #e74c3c;
+}
+
+.slid_content {
+    position: relative;
+}
+
+.slid {
+    position: relative;
+    text-align: center; 
+    padding: 80px 61px 50px 61px;
+    width: 81.1%;
+    height: 78.5%;
+    display: inline-block;
+}
+
+.img_slider {
+    position: absolute;
+    display: inline-block;
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 34px;
+    background-image: url(bino.image/3.png);
+
+}
+
+.tittle_slid {
+    padding-bottom: 30;
+    position: relative;
+    display: inline-block;
+    height: 15px;
+    color: #6a6a6a;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.35px;
+}
+
+.tittle_slid::after {
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    margin-left: -19px;
+    width: 40px;
+    content: '';
+    border-bottom: 1px solid #000;
+}
+
+.text_slid {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    color: #999999;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 24px;
+    letter-spacing: 1.05px
+}
+
+.slider_bottom {
+    cursor: pointer;
+    box-shadow: 0 2px 4.75px 0.25px rgba(0,0,0,.25);
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 0.14px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    background-color: #e74c3c;
+    padding: 15px 38px 15px 38px;
+}
+
+.bottom__block {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    z-index: 15;
+    width: 60%;
+    margin-left: -30%;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.bottom_slid_click {
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 2px;
+    margin-left: 0;
+    width: 12px;
+    height: 12px;
+    background-color: #f4f5f9;
+    border: none;
+    border-radius: 50%;
+}
