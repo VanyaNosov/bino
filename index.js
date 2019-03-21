@@ -51,6 +51,23 @@ let buttom_top3 = document.getElementById('buttom_slider3').addEventListener('cl
     vanyacha.style.top =  - 1000  + 'px';
 });
 
+const slid_study = document.getElementById('slid');
+
+let slid_content_one = document.getElementById('one_slid').addEventListener('click', () => {
+    slid_study.style.right = 0 + 'px';
+    slid_study.style.right = 0 + 'px';
+}) 
+
+let slid_content_two = document.getElementById('two_slid').addEventListener('click', () => {
+    slid_study.style.right = 0 + 'px';
+    slid_study.style.right = 116 + '%';
+})  
+
+let slid_content_three = document.getElementById('three_slid').addEventListener('click', () => {
+    slid_study.style.right = 0 + 'px';
+    slid_study.style.right = 232 + '%';
+})  
+
 
 
 // let buttom_top1 = document.getElementById('buttom_slider1').addEventListener('click', () => {
