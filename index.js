@@ -11,6 +11,69 @@ function vanya () {
     }
 };
 
+const vanyacha = document.getElementById('content');
+
+const slid_study = document.getElementById('slid');
+
+const slid_content_one = document.getElementById('one_slid');
+
+const slid_content_two = document.getElementById('two_slid');
+
+const slid_content_three = document.getElementById('three_slid');
+
+const slidContentOne2 = document.getElementById("slid_content_one");
+
+const slidContentTwo = document.getElementById("slid_content_two");
+
+const slidContentThree = document.getElementById("slid_content_three");
+
+let buttom_top1 = document.getElementById('buttom_slider1').addEventListener('click', () => {
+    vanyacha.style.top = 0 + 'px';
+    vanyacha.style.top = 0 + 'px';
+});
+
+let buttom_top2 = document.getElementById('buttom_slider2').addEventListener('click', () => {
+    vanyacha.style.top = 0 + 'px';  
+    vanyacha.style.top =  - 500 + 'px';
+});
+
+let buttom_top3 = document.getElementById('buttom_slider3').addEventListener('click', () => {
+    vanyacha.style.top = 0 + 'px';  
+    vanyacha.style.top =  - 1000  + 'px';
+});
+
+slid_content_one.addEventListener('click', function () {
+    slidContentOne2.style.opacity = "1";
+    slidContentTwo.style.opacity = "0";
+    slidContentThree.style.opacity = "0";
+    slidContentOne2.style.transition = 1 + 's';
+    slidContentTwo.style.transition = 0 + 's';
+    slidContentThree.style.transition = 0 + 's';
+}) 
+
+slid_content_two.addEventListener('click', function () {
+    slidContentOne2.style.opacity = '0'
+    slidContentThree.style.opacity = "0";
+    slidContentTwo.style.opacity = "1";
+    slidContentOne2.style.transition = 0 + 's';
+    slidContentTwo.style.transition = 1 + 's';
+    slidContentThree.style.transition = 0 + 's';
+})  
+
+slid_content_three.addEventListener('click', function () { 
+    slidContentOne2.style.opacity = '0'
+    slidContentThree.style.opacity = "1";
+    slidContentTwo.style.opacity = "0";
+    slidContentOne2.style.transition = 0 + 's';
+    slidContentTwo.style.transition = 0 + 's';
+    slidContentThree.style.transition = 1 + 's';
+})  
+
+
+
+
+
+
 // const vanyacha = document.getElementById('content');
 
 // let buttom_top1 = document.getElementById('buttom_slider1').addEventListener('click', () =>  changePosition('firstButton'));
@@ -32,42 +95,6 @@ function vanya () {
 //         vanyacha.style.top = - 1000 + 'px';
 //     };
 // };
-
-
-const vanyacha = document.getElementById('content');
-
-let buttom_top1 = document.getElementById('buttom_slider1').addEventListener('click', () => {
-    vanyacha.style.top = 0 + 'px';
-    vanyacha.style.top = 0 + 'px';
-});
-
-let buttom_top2 = document.getElementById('buttom_slider2').addEventListener('click', () => {
-    vanyacha.style.top = 0 + 'px';  
-    vanyacha.style.top =  - 500 + 'px';
-});
-
-let buttom_top3 = document.getElementById('buttom_slider3').addEventListener('click', () => {
-    vanyacha.style.top = 0 + 'px';  
-    vanyacha.style.top =  - 1000  + 'px';
-});
-
-const slid_study = document.getElementById('slid');
-
-let slid_content_one = document.getElementById('one_slid').addEventListener('click', () => {
-    slid_study.style.right = 0 + 'px';
-    slid_study.style.right = 0 + 'px';
-}) 
-
-let slid_content_two = document.getElementById('two_slid').addEventListener('click', () => {
-    slid_study.style.right = 0 + 'px';
-    slid_study.style.right = 116 + '%';
-})  
-
-let slid_content_three = document.getElementById('three_slid').addEventListener('click', () => {
-    slid_study.style.right = 0 + 'px';
-    slid_study.style.right = 232 + '%';
-})  
-
 
 
 // let buttom_top1 = document.getElementById('buttom_slider1').addEventListener('click', () => {

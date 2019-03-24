@@ -145,10 +145,11 @@ hr {
 .button_learn {
     border-radius: 2px;
     font-size: 14px;
+    background-color: Transparent;
     color: #ffffff;
     font-weight: 700;
     cursor: pointer;
-    padding: 22px 69px 22px 69px;
+    padding: 22px 69px 38px 69px;
     height: 52px;
     border: 1px solid #ffffff;
 }
@@ -160,7 +161,7 @@ hr {
 
 .header_top {
     padding: 40px 40px 40px 40px;
-    z-index: 50;
+    z-index: 100;
     top: -92%;
     position: fixed;
     transition: 0.7s;
@@ -329,7 +330,6 @@ hr {
 }
 
 .text_history {
-    max-height: 116px;
     margin-left: -1px;
     margin-bottom: 50px;
     font-size: 13px;
@@ -338,20 +338,12 @@ hr {
     color: #999;
 } 
 
-.button_block_history {
-    margin-top: 50px;
-    border-radius: 2px;
+.button_history {
     box-shadow: 0 2px 4.75px 0.25px rgba(0,0,0,.25);
-    background-color: #e74c3c;
     width: 225px;
     height: 56px;
-    display: inline-block;
-}
-
-.button_history {
     text-align: center;
-    display: block;
-    padding-top: 22px;
+    display: inline-block;
     cursor: pointer;
     font-weight: 700;
     color: #fff;
@@ -359,7 +351,7 @@ hr {
     background-color: #e74c3c;
 }
 
-.button_block_history:hover {
+.button_history:hover {
     transition: 0.8s;
     cursor: pointer;
     opacity: 0.8;
@@ -375,6 +367,7 @@ hr {
 }
 
  .history_img {
+    padding-left: 20px;
     max-width: 100%;
     max-height: 407px;
     display: inline-block;
@@ -402,6 +395,7 @@ hr {
 .SERVICES_CONTAINER {
     position: relative;
     margin-bottom: 135px;
+    padding-left: 50px;
     padding-top: 155px;
     padding-bottom: 155px;
     width: 100%;
@@ -728,7 +722,7 @@ hr {
     background-repeat: no-repeat;
     background-position: 100%;
     background-size: 50% 100%;
-    max-width: 1170px;
+    width: 1170px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 69px;
@@ -738,10 +732,10 @@ hr {
 }
 
 .slider_study {
+    position: relative;
     display: inline-block;
     width: 55%;
     height: 100%;
-    z-index: 50;
     overflow: hidden;
     margin-right: 5px;
     background-color: #fff;
@@ -756,45 +750,51 @@ hr {
     width: 91px;
     height: 91px;
     left: 42%;
-    bottom: 80%;
+    bottom: 65%;
     background-color: #e74c3c;
 }
 
 .slid_content {
+    opacity: 0;
     padding-top: 100px;
+    text-align: center;
+    left: 10%;
     display: inline-block;
     float: left;
-    width: 25.2%;
-    position: relative;
-    margin-right: 100px;
+    position: absolute;
     overflow: hidden;
-    padding: 260px 0px 80px 0px;
+    padding: 260px 0px 0px 0px;
+}
+
+#slid_content_one {
+    transition: 1s;
+    opacity: 1;
+}
+
+#slid_content_two {
+    transition: 1s;
+    opacity: 0; 
+}
+
+#slid_content_three {
+    transition: 1s;
+    opacity: 0; 
 }
 
 .slid_content:last-child {
     margin-right: 0px;
 }
 
-.slid {
-    right: 0;
-    transition: 0.4s;
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    width: 400%;
-    display: inline-block;
-}
-
 .img_slider {
-    top: 3%;
-    left: 50%;
+    top: 22.5%;
+    left: 49%;
     position: absolute;
     display: inline-block;
     background-repeat: no-repeat;
     width: 21px;
     height: 34px;
-    background-image: url(bino.image/3.png);
-
+    z-index: 50;
+    background-image: url(bino.image/333.png);
 }
 
 .tittle_slid {
@@ -852,7 +852,7 @@ hr {
     margin-left: -30%;
     padding-left: 0;
     list-style: none;
-    text-align: center
+    text-align: center;
 }
 
 .bottom_slid_click {
@@ -874,15 +874,16 @@ hr {
     background-repeat: no-repeat;
     position: relative;
     background-size: cover;
-    margin-bottom: 500px;
-    padding-top: 155px;
-    padding-bottom: 57px;
+    height: 532px;
 }
 
 .status_block {
     text-align: center;
     width: 100%;
-    height: 350px;
+    position: relative;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
 }
 
 .status {
@@ -926,9 +927,124 @@ hr {
     line-height: 30px;
 }
 
+.container_prices {
+    background-color: #fff;
+    padding: 150px 0px 150px 0px;
+    position: relative;
+}
+
+.prices {
+    position: relative;
+    display: inline-block;
+    margin-right: 15px;  
+    margin-bottom: 70px;
+    width: 380px;
+    height: 600px;
+    background-color: #f4f5f9;;
+}
+
+.prices:last-child {
+    margin-right: 0px;
+}
+
+.block_prices {
+    margin-top: 70px;
+}
+
 .text_status {
     color: #f4f5f9;
     font-size: 18px;
     font-weight: 400;
     line-height: 30px;
 }
+
+.prices_block_top {
+    position: relative;
+    background-color: #999999;
+    width: 100%;
+    height: 200px;
+}
+
+.prices_block_top_red {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: #e74c3c;
+}
+
+.prices_tittle_block {
+    padding-top: 47px;
+    letter-spacing: 1.8px;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.price {
+    border-radius: 50%;
+    left: 30%;
+    top: 60%;
+    border: 10px solid rgba(244,245,249,.25);
+    background-color: #fff;
+    background-clip: padding-box;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+}
+
+.the_sum {
+    padding-top: 40px;
+    color: #999999;
+    font-size: 40px;
+    font-weight: 700;
+    font-weight: bold;
+}
+
+.the_sum_red {
+    padding-top: 40px;
+    color: #e74c3c;
+    font-size: 40px;
+    font-weight: 700;
+    font-weight: bold;
+}
+
+.month_sum {
+    color: #999999;;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.block_text_prices {
+    top: 50%;
+    left: 27%;
+    list-style: none;
+    position: absolute
+}
+
+.text_block_prices {
+    color: #999999;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+.prices_bottom {
+    position: absolute;
+    top: 82.5%;
+    left: 30%;
+    cursor: pointer;
+    box-shadow: 0 2px 4.75px 0.25px rgba(0,0,0,.25);
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 0.14px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    background-color: #e74c3c;
+    padding: 15px 38px 15px 38px;
+}
+
+
+
