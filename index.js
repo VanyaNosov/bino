@@ -1,17 +1,16 @@
-const header_top = document.getElementById('header_top');
-window.addEventListener("scroll",() => vanya());
-
-function vanya () {
-    if (window.pageYOffset > 820) {
-        header_top.style.top = "0%"; 
-        header_top.style.opacity = "1";
-    }else {
-        header_top.style.top = "-92%"; 
-        header_top.style.opacity = "0";
-    }
-};
-
 const vanyacha = document.getElementById('content');
+
+const buttom_top1 = document.getElementById('buttom_slider1');
+
+const buttom_top2 = document.getElementById('buttom_slider2');
+
+const buttom_top3 = document.getElementById('buttom_slider3');
+
+const buttom_slider_c1 = document.getElementById('buttom_slider_c1');
+
+const buttom_slider_c2 = document.getElementById('buttom_slider_c2');
+
+const buttom_slider_c3 = document.getElementById('buttom_slider_c3');
 
 const slid_study = document.getElementById('slid');
 
@@ -27,17 +26,26 @@ const slidContentTwo = document.getElementById("slid_content_two");
 
 const slidContentThree = document.getElementById("slid_content_three");
 
-let buttom_top1 = document.getElementById('buttom_slider1').addEventListener('click', () => {
+buttom_top1.addEventListener('click', () => {
+    buttom_slider_c1.style.backgroundColor = 'e74c3c';
+    buttom_slider_c2.style.backgroundColor = '#3e3e3e';
+    buttom_slider_c3.style.backgroundColor = '#3e3e3e';
     vanyacha.style.top = 0 + 'px';
     vanyacha.style.top = 0 + 'px';
 });
 
-let buttom_top2 = document.getElementById('buttom_slider2').addEventListener('click', () => {
+buttom_top2.addEventListener('click', () => {
+    buttom_slider_c2.style.backgroundColor = 'e74c3c';
+    buttom_slider_c1.style.backgroundColor = '#3e3e3e';
+    buttom_slider_c3.style.backgroundColor = '#3e3e3e';
     vanyacha.style.top = 0 + 'px';  
     vanyacha.style.top =  - 500 + 'px';
 });
 
-let buttom_top3 = document.getElementById('buttom_slider3').addEventListener('click', () => {
+buttom_top3.addEventListener('click', () => {
+    buttom_slider_c3.style.backgroundColor = 'e74c3c';
+    buttom_slider_c2.style.backgroundColor = '#3e3e3e';
+    buttom_slider_c1.style.backgroundColor = '#3e3e3e';
     vanyacha.style.top = 0 + 'px';  
     vanyacha.style.top =  - 1000  + 'px';
 });
@@ -68,6 +76,19 @@ slid_content_three.addEventListener('click', function () {
     slidContentTwo.style.transition = 0 + 's';
     slidContentThree.style.transition = 1 + 's';
 })  
+
+const header_top = document.getElementById('header_top');
+window.addEventListener("scroll",() => vanya());
+
+function vanya () {
+    if (window.pageYOffset > 820) {
+        header_top.style.top = "0%"; 
+        header_top.style.opacity = "1";
+    }else {
+        header_top.style.top = "-92%"; 
+        header_top.style.opacity = "0";
+    }
+};
 
 
 

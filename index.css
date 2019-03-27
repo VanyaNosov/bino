@@ -751,19 +751,29 @@ hr {
     height: 91px;
     left: 42%;
     bottom: 65%;
+    border: 3px solid #2020206a;;
     background-color: #e74c3c;
+}
+
+#slider_img_block_three {
+    border: 3px solid #e74c3c;
+    background-color: #2020206a;
+}
+
+#slider_img_block_two {
+    border: 3px solid #e74c3c;
+    background-color: black;
 }
 
 .slid_content {
     opacity: 0;
     padding-top: 100px;
-    text-align: center;
-    left: 10%;
+    text-align: center;  
     display: inline-block;
     float: left;
     position: absolute;
     overflow: hidden;
-    padding: 260px 0px 0px 0px;
+    padding: 260px 60px 0px 60px;
 }
 
 #slid_content_one {
@@ -787,7 +797,7 @@ hr {
 
 .img_slider {
     top: 22.5%;
-    left: 49%;
+    left: 47.7%;
     position: absolute;
     display: inline-block;
     background-repeat: no-repeat;
@@ -830,6 +840,10 @@ hr {
 }
 
 .slider_bottom {
+    transform: translateX(-50%);
+    top: 80%;
+    position: absolute;
+    left: 50%;
     cursor: pointer;
     box-shadow: 0 2px 4.75px 0.25px rgba(0,0,0,.25);
     font-size: 12px;
@@ -943,6 +957,16 @@ hr {
     background-color: #f4f5f9;;
 }
 
+.prices:hover .prices_block_top {
+    transition: 0.8s;
+    background-color: #e74c3c;
+}
+
+.prices:hover .the_sum {
+    transition: 0.8s;
+    color: #e74c3c;
+}
+
 .prices:last-child {
     margin-right: 0px;
 }
@@ -996,14 +1020,6 @@ hr {
 .the_sum {
     padding-top: 40px;
     color: #999999;
-    font-size: 40px;
-    font-weight: 700;
-    font-weight: bold;
-}
-
-.the_sum_red {
-    padding-top: 40px;
-    color: #e74c3c;
     font-size: 40px;
     font-weight: 700;
     font-weight: bold;
