@@ -864,7 +864,7 @@ hr {
 .bottom__block {
     position: absolute;
     left: 50%;
-    bottom: 20px;
+    bottom: 25px;
     z-index: 15;
     width: 60%;
     margin-left: -30%;
