@@ -1,30 +1,20 @@
 const vanyacha = document.getElementById('content');
-
 const buttom_top1 = document.getElementById('buttom_slider1');
-
 const buttom_top2 = document.getElementById('buttom_slider2');
-
 const buttom_top3 = document.getElementById('buttom_slider3');
-
 const buttom_slider_c1 = document.getElementById('buttom_slider_c1');
-
 const buttom_slider_c2 = document.getElementById('buttom_slider_c2');
-
 const buttom_slider_c3 = document.getElementById('buttom_slider_c3');
-
 const slid_study = document.getElementById('slid');
-
 const slid_content_one = document.getElementById('one_slid');
-
 const slid_content_two = document.getElementById('two_slid');
-
 const slid_content_three = document.getElementById('three_slid');
-
 const slidContentOne2 = document.getElementById("slid_content_one");
-
 const slidContentTwo = document.getElementById("slid_content_two");
-
 const slidContentThree = document.getElementById("slid_content_three");
+const OneSlid = document.getElementById("one_slid");
+const TwoSlid = document.getElementById("two_slid");
+const ThreeSlid = document.getElementById("three_slid");
 
 buttom_top1.addEventListener('click', () => {
     buttom_slider_c1.style.backgroundColor = 'e74c3c';
@@ -54,35 +44,44 @@ buttom_top3.addEventListener('click', () => {
 });
 
 slid_content_one.addEventListener('click', function () {
+    OneSlid.style.backgroundColor = 'e74c3c';
+    TwoSlid.style.backgroundColor = '#f4f5f9';
+    ThreeSlid.style.backgroundColor = '#f4f5f9';
     slidContentOne2.style.opacity = "1";
     slidContentTwo.style.opacity = "0";
     slidContentThree.style.opacity = "0";
     slidContentOne2.style.transition = 1 + 's';
     slidContentTwo.style.transition = 0 + 's';
     slidContentThree.style.transition = 0 + 's';
-}) 
+}); 
 
 slid_content_two.addEventListener('click', function () {
+    TwoSlid.style.backgroundColor = 'e74c3c';
+    OneSlid.style.backgroundColor = '#f4f5f9';
+    ThreeSlid.style.backgroundColor = '#f4f5f9';
     slidContentOne2.style.opacity = '0'
     slidContentThree.style.opacity = "0";
     slidContentTwo.style.opacity = "1";
     slidContentOne2.style.transition = 0 + 's';
     slidContentTwo.style.transition = 1 + 's';
     slidContentThree.style.transition = 0 + 's';
-})  
+});
 
 slid_content_three.addEventListener('click', function () { 
+    ThreeSlid.style.backgroundColor = 'e74c3c';
+    TwoSlid.style.backgroundColor = '#f4f5f9';
+    OneSlid.style.backgroundColor = '#f4f5f9';
     slidContentOne2.style.opacity = '0'
     slidContentThree.style.opacity = "1";
     slidContentTwo.style.opacity = "0";
     slidContentOne2.style.transition = 0 + 's';
     slidContentTwo.style.transition = 0 + 's';
     slidContentThree.style.transition = 1 + 's';
-})  
+});
 
 const header_top = document.getElementById('header_top');
-window.addEventListener("scroll",() => vanya());
 
+window.addEventListener("scroll", () => vanya());
 function vanya () {
     if (window.pageYOffset > 820) {
         header_top.style.top = "0%"; 
@@ -91,7 +90,7 @@ function vanya () {
         header_top.style.top = "-92%"; 
         header_top.style.opacity = "0";
     }
-};
+}
 
 
 
