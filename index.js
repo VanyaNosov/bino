@@ -54,7 +54,7 @@ slid_content_one.addEventListener('click', function () {
     slidContentTwo.style.transition = 0 + 's';
     slidContentThree.style.transition = 0 + 's';
 }); 
-
+         
 slid_content_two.addEventListener('click', function () {
     TwoSlid.style.backgroundColor = 'e74c3c';
     OneSlid.style.backgroundColor = '#f4f5f9';

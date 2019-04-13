@@ -1080,7 +1080,7 @@ hr {
     overflow: hidden;
     background-image: url(bino.image/Background233.png);
     text-align: center;
-    padding-top: 200px;
+    padding-top: 146px;
     background-attachment: fixed;
     width: 100%;
     background-repeat: no-repeat;
@@ -1118,28 +1118,28 @@ hr {
 }
 
  #img_team_one {
-    top: 60%;
+    top: 65%;
     left: -150%;
 }
 
 #img_team_two {
     left: -62%;
-    top: 38%;
+    top: 47%;
 }
 
 #img_team_three {
     left: 25%;
-    top: 43%;
+    top: 50%;
 }   
 
 #img_team_four {
     right: -65%;
-    top: 50%;
+    top: 62%;
 }
 
 #img_team_five {
     right: -150%;
-    top: 38%;
+    top: 52%;
 } 
 
 
