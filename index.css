@@ -1263,13 +1263,20 @@ hr {
 
 .Blog_block {
     width: 50%;
-    height: 505;
     display: inline-block;
 }
 
 .img_block_blog {
+    padding-right: 50px;
     display: inline-block;
     max-width: 50%;
+    float: left;
+}
+
+.img_block_blog:nth-child(n+2):nth-child(-n+4) {
+    float: right;
+    padding-right: 0px;
+    padding-left: 50px;
 }
 
 .img_blog {
@@ -1281,14 +1288,13 @@ hr {
     display: inline-block;
     text-align: left;
     color: #fff;
-    padding-left: 50px;
-    padding-right: 50px;
-    width: 50%;
+    vertical-align: top;
     color: #ffffff;
     box-sizing: border-box;
 }
 
 .text_top_blog {
+    padding-top: 71px;
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.7px;
@@ -1317,9 +1323,13 @@ hr {
     font-size: 16px;
     font-weight: 400;
     line-height: 30px;
+    text-align: left;
+    color: #ffffff;
 }
 
 .button_blog {
+    color: #ffffff;
+    cursor: pointer;
     margin-top: 50px;
     font-size: 18px;
     font-weight: 400;
