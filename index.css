@@ -114,6 +114,8 @@ hr {
 }
 
 .text_slider {
+    max-width: 550px;
+    display: inline-block;
     margin-top: 47px;
     font-size: 14px;
     color: #cbc6c0;
@@ -122,18 +124,18 @@ hr {
 
 .button_block {
     margin-top: 90px;
-    height: 60px;
 }
 
 .button_now {
     border-radius: 2px;
     cursor: pointer;
     font-weight: 700;
-    margin-right: 30px;
     color: #fff;
     font-size: 14px;
     background-color: #e74c3c;
-    padding: 22px 47px 22px 47px;
+    padding: 0px 20px;
+    min-width: 225px;
+    height: 56px;
 }
 
 .button_now:hover {
@@ -149,9 +151,10 @@ hr {
     color: #ffffff;
     font-weight: 700;
     cursor: pointer;
-    padding: 22px 69px 38px 69px;
-    height: 52px;
     border: 1px solid #ffffff;
+    padding: 0px 20px;
+    min-width: 225px;
+    height: 56px;
 }
 
 .button_learn:hover {
@@ -330,7 +333,6 @@ hr {
 }
 
 .text_history {
-    margin-left: -1px;
     margin-bottom: 50px;
     font-size: 13px;
     line-height: 29px;
@@ -340,12 +342,13 @@ hr {
 
 .button_history {
     box-shadow: 0 2px 4.75px 0.25px rgba(0,0,0,.25);
-    width: 225px;
+    min-width: 225px;
     height: 56px;
     text-align: center;
     display: inline-block;
     cursor: pointer;
     font-weight: 700;
+    padding: 0px 20px;
     color: #fff;
     font-size: 14px;
     background-color: #e74c3c;
@@ -637,7 +640,7 @@ hr {
 }
 
 .recent_works_img {
-    max-width: 100%;
+    width: 100%;
     position: relative; 
     cursor: pointer;
 }
@@ -645,7 +648,6 @@ hr {
 .img_works_block {
     overflow: hidden;
     display: inline-block;
-    max-width: 475.7px;
     width: 25%;
     position: relative; 
 }
@@ -662,6 +664,11 @@ hr {
     transition: 0s;
     top: 100%;
     position: absolute;
+}
+
+.text_block_works:hover .recent_works_img {
+    opacity: 0.3;
+    transition: 0.4s;
 }
 
 .text_block_works:before{
@@ -835,7 +842,8 @@ hr {
     font-size: 12px;
     font-weight: bold;
     line-height: 24px;
-    letter-spacing: 1.05px
+    letter-spacing: 1.05px;
+    max-width: 518px;
 }
 
 .slider_bottom {
@@ -906,12 +914,36 @@ hr {
 
 .status {
     width: 15%;
-    padding-top: 157px;
     position: relative;
     display: inline-block;
 }
 
-.status:before {
+.like_status {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 50px;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 50%
+}
+
+.heart {
+    width: 32px;
+    height: 40px;
+    margin-top: 45px;
+    cursor: pointer;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(bino.image/2222.png);
+}
+
+.heart:hover {
+    animation-name: heart_an;
+    animation-duration: 0.8s;
+}
+
+/* .status:before {
     position: absolute;
     content: "";
     top: 0;
@@ -924,15 +956,36 @@ hr {
 
 .status:after {
     content: "";
-    width: 32px;
+    width: 50px;
     position: absolute;
     background-repeat: no-repeat;
-    height: 32px;
-    top: 44px;
+    height: 50px;
+    top: 65px;
+    width: 32px;
     cursor: pointer;
-    margin-left: -15px;;
+    background-size: contain;
+    transform: translate(-50%, -50%);
     background-image: url(bino.image/2222.png);
-}    
+    animation-name: heart;
+    animation-duration: 2s;
+} */
+
+@keyframes heart_an {
+    0% {
+        height: 50px;
+        width: 32px;
+    }
+
+    50% {
+        height: 50px;
+        width: 50px;
+    }
+
+    100% {
+        height: 50px;
+        width: 32px;
+    }
+}
 
 .status:last-child {
     margin-right: 0px;
@@ -958,6 +1011,7 @@ hr {
     margin-bottom: 70px;
     width: 380px;
     height: 600px;
+    transition: 0.8s;
     background-color: #f4f5f9;;
 }
 
@@ -1080,7 +1134,6 @@ hr {
     overflow: hidden;
     background-image: url(bino.image/Background233.png);
     text-align: center;
-    padding-top: 146px;
     background-attachment: fixed;
     width: 100%;
     background-repeat: no-repeat;
@@ -1093,7 +1146,8 @@ hr {
 .block_content_team {
     background-image: url(bino.image/Curve.png);
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: 50% 50%;
+    padding-top: 146px;
     background-size: cover;
     height: 100%;
     box-sizing: border-box;
@@ -1118,28 +1172,28 @@ hr {
 }
 
  #img_team_one {
-    top: 65%;
+    top: 36%;
     left: -150%;
 }
 
 #img_team_two {
     left: -62%;
-    top: 47%;
+    top: 21%;
 }
 
 #img_team_three {
     left: 25%;
-    top: 50%;
+    top: 26%;
 }   
 
 #img_team_four {
     right: -65%;
-    top: 62%;
+    top: 40%;
 }
 
 #img_team_five {
     right: -150%;
-    top: 52%;
+    top: 37%;
 } 
 
 
@@ -1266,6 +1320,18 @@ hr {
     display: inline-block;
 }
 
+.text_content_block_blog {
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+
+.Blog_block:nth-child(n+3):nth-child(-n+4) {
+    width: 50%;
+    padding-left: 50px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
 .img_block_blog {
     padding-right: 50px;
     display: inline-block;
@@ -1328,12 +1394,22 @@ hr {
 }
 
 .button_blog {
+    margin-top: 49px;
+    margin-bottom: 20px;
+    display: inline-block;
     color: #ffffff;
     cursor: pointer;
     margin-top: 50px;
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
+}
+
+.button_blog:hover {
+    box-shadow: 0 5px 13px 2px #000000;
+    transition: 0.8s;
+    opacity: 0.8;
+    background-color: #000000;
 }
 
 
