@@ -5,7 +5,6 @@ const buttom_top3 = document.getElementById('buttom_slider3');
 const buttom_slider_c1 = document.getElementById('buttom_slider_c1');
 const buttom_slider_c2 = document.getElementById('buttom_slider_c2');
 const buttom_slider_c3 = document.getElementById('buttom_slider_c3');
-const slid_study = document.getElementById('slid');
 const slid_content_one = document.getElementById('one_slid');
 const slid_content_two = document.getElementById('two_slid');
 const slid_content_three = document.getElementById('three_slid');

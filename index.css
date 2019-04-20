@@ -943,6 +943,11 @@ hr {
     animation-duration: 0.8s;
 }
 
+.fff:hover {
+    animation-name: heart_an;
+    animation-duration: 0.8s;
+}
+
 /* .status:before {
     position: absolute;
     content: "";
