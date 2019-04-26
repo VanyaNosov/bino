@@ -10,6 +10,23 @@ body {
     margin: 0;
 }
 
+@keyframes hearte {
+    0% {       
+        transform: scale(1);
+        fill: none;
+    }
+
+    50% {      
+        transform: scale(1.7);
+        fill: red;
+    }
+
+    100% {
+        transform: scale(1);
+        fill: none;
+    }
+}
+
 .navigator {
     background-image: url(bino.image/Background.png);
     background-size: cover;
@@ -296,7 +313,7 @@ hr {
 
 .animation {
     transition: .5s;
-    left: 33%;
+    left: 30%;
     bottom: 53%;
     width: 71px;
     height: 71px;
@@ -350,6 +367,7 @@ hr {
     font-weight: 700;
     padding: 0px 20px;
     color: #fff;
+    border-radius: 3px;
     font-size: 14px;
     background-color: #e74c3c;
 }
@@ -652,6 +670,63 @@ hr {
     position: relative; 
 }
 
+#img_works_block_one {
+    background-image: url(bino.image/1slider.png);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+#img_works_block_two {
+    background-image: url(bino.image/2slider.png);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+#img_works_block_three {
+    background-image: url(bino.image/3slider.png);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+#img_works_block_four {
+    background-image: url(bino.image/4slider.png);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+#img_works_block_five {
+    background-image: url(bino.image/5slider.png);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+#img_works_block_six {
+    background-image: url(bino.image/6slider.png);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+#img_works_block_seven {
+    background-image: url(bino.image/7slider.png);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+#img_works_block_eight {
+    background-image: url(bino.image/8slider.png);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    
+}
+
 .recent_works_img:hover {
     opacity: 0.3;
     transition: 0.4s;
@@ -919,6 +994,7 @@ hr {
 }
 
 .like_status {
+    position: relative;
     width: 110px;
     height: 110px;
     margin-bottom: 50px;
@@ -927,25 +1003,23 @@ hr {
     border-radius: 50%
 }
 
-.heart {
-    width: 32px;
-    height: 40px;
-    margin-top: 45px;
+.hearte {
+    transform-origin: 50% 50%;
+    transition: 1s;
+    margin-top: 40px;
     cursor: pointer;
     display: inline-block;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url(bino.image/2222.png);
+    fill: none;
 }
 
-.heart:hover {
-    animation-name: heart_an;
-    animation-duration: 0.8s;
+.hearte:hover {
+    animation-name: hearte;
+    animation-duration: 1s;
 }
 
 .fff:hover {
-    animation-name: heart_an;
-    animation-duration: 0.8s;
+    animation-name: hearte;
+    animation-duration: 1s;
 }
 
 /* .status:before {
@@ -974,23 +1048,6 @@ hr {
     animation-name: heart;
     animation-duration: 2s;
 } */
-
-@keyframes heart_an {
-    0% {
-        height: 50px;
-        width: 32px;
-    }
-
-    50% {
-        height: 50px;
-        width: 50px;
-    }
-
-    100% {
-        height: 50px;
-        width: 32px;
-    }
-}
 
 .status:last-child {
     margin-right: 0px;
@@ -1051,6 +1108,7 @@ hr {
 }
 
 .prices_block_top {
+    transition: 0.8s;
     position: relative;
     background-color: #999999;
     width: 100%;
@@ -1058,6 +1116,7 @@ hr {
 }
 
 .prices_block_top_red {
+    transition: 0.8s;
     position: relative;
     width: 100%;
     height: 200px;
@@ -1086,6 +1145,7 @@ hr {
 }
 
 .the_sum {
+    transition: 0.8s;
     padding-top: 40px;
     color: #999999;
     font-size: 40px;
@@ -1114,6 +1174,7 @@ hr {
 }
 
 .prices_bottom {
+    transition: 0.8s;
     position: absolute;
     top: 82.5%;
     left: 30%;
@@ -1169,41 +1230,40 @@ hr {
 }
 
 .img_team {
+    transform: translate(-50%, 50%);
     cursor: pointer;
+    left: 50%;
     position: absolute;
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
 }
 
- #img_team_one {
-    top: 36%;
-    left: -150%;
+#img_team_one {
+    transform: translate(-610px,136px);
 }
 
 #img_team_two {
-    left: -62%;
-    top: 21%;
+    transform: translate(-350px,81px);
 }
 
 #img_team_three {
-    left: 25%;
-    top: 26%;
+    transform: translate(-77px,95px);
 }   
 
 #img_team_four {
-    right: -65%;
-    top: 40%;
+    transform: translate(200px,136px);
 }
 
 #img_team_five {
-    right: -150%;
-    top: 37%;
+    transform: translate(450px,129px);
 } 
 
 
 .img {
     transition: 0.8s;
+    position: relative;
+    z-index: 50;
     cursor: pointer;
     border-radius: 50%;
     border: 3px solid #e74c3c;
@@ -1337,11 +1397,17 @@ hr {
     display: inline-block;
 }
 
-.img_block_blog {
+.img_block_blog { 
+    box-sizing: border-box;
     padding-right: 50px;
     display: inline-block;
     max-width: 50%;
     float: left;
+}
+
+#one_two_text {
+    padding-right: 50px;
+    box-sizing: border-box;
 }
 
 .img_block_blog:nth-child(n+2):nth-child(-n+4) {
@@ -1417,6 +1483,141 @@ hr {
     background-color: #000000;
 }
 
+.check_in_container {
+    padding-bottom: 152px;
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.Contact_Information {
+    padding-top: 32px;
+    padding-left: 88px;
+    margin-right: 30px;
+    width: 475px;
+    height: 565px;
+    text-align: left;
+    display: inline-block;
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.1);
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
 
+.check_in {
+    display: inline-block;
+    width: 665px;
+    box-sizing: border-box;
+    padding: 20px;
+    vertical-align: top;
+    padding-right: 99px;
+    padding-left: 101px;
+    padding-top: 69px;
+    height: 565px;
+    text-align: left;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,.1);
+    background-color: #ffffff;
+}
 
+.check_in_block {
+    margin-top: 70px;
+}
+
+.tittle_contact {
+    color: #e74e3e;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    padding-top: 63px;
+}
+
+.info_contact {
+    max-width: 260px;
+    font-weight: 400;
+    color: #999999;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    padding-top: 19px;
+}
+
+.info_check_in {
+    font-weight: 400;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 6px;
+    padding-bottom: 16px;
+    display: block;
+    color: #6a6a6a;
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.check_in_button {
+    box-shadow: 0 2px 4.75px 0.25px rgba(0,0,0,.25);
+    min-width: 155px;
+    height: 44px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 0px 20px;
+    transition: 0.8s;
+    color: #fff;
+    font-size: 14px;
+    background-color: #e74c3c;
+}
+
+.check_in_button:hover {
+    opacity: 0.8;
+}
+
+#textarea {
+    height: 121px;
+}
+
+.start_container {
+    text-align: center;
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),url(bino.image/Put_Your_Image1.png);
+    background-color: #000000;
+    width: 100%;
+    min-height: 480px;
+    padding: 145px 10px 125px;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+}
+
+.tittle_start_container {
+    font-size: 36px;
+    color: #fff;
+}
+
+.text_start {
+    font-size: 18px;
+    color: #fff;
+    padding-top: 6px;
+    margin-bottom: 70px;
+}
+
+.footer {
+    box-sizing: border-box;
+    width: 100%;
+    height: 90px;
+    background-color: #202020;
+}
+
+.footer_content {
+    max-width: 1170px;
+    padding-top: 35px;
+    box-sizing: border-box;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon_social_network {
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 10px;
+}
