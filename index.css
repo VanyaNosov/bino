@@ -1230,7 +1230,7 @@ hr {
 }
 
 .img_team {
-    transform: translate(-50%, 50%);
+    top: 34%;
     cursor: pointer;
     left: 50%;
     position: absolute;

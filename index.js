@@ -91,10 +91,18 @@ function vanya () {
     }
 }
 
+function ReplaceEmail () {
+    let Email = document.getElementById("Email").value;
+    console.log(Email.value);
+    // Email = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+}
+ReplaceEmail();
 
-
-
-
+function button () {
+    const DisabledButton = document.getElementById("check_in_button");
+    DisabledButton.style.backgroundColor = "black";
+}
+button();
 
 // const vanyacha = document.getElementById('content');
 
