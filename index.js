@@ -95,8 +95,6 @@ function vanya () {
 }
 
 const DisabledButton = document.getElementById("check_in_button");
-
-
 let InputName = document.getElementById("Name").length;
 let reg = document.getElementById("Email").value;
 
@@ -118,8 +116,10 @@ let TeamMan = document.getElementById("img_team_three").addEventListener('click'
 });
 
 OffButton.addEventListener('click', function () {
-        Chart.style.zIndex = -50;
+    Chart.style.zIndex = -50;
 }); 
+
+
 
 
 
