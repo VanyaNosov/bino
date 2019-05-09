@@ -1007,12 +1007,11 @@ hr {
     transform-origin: 50% 50%;
     transition: 1s;
     margin-top: 40px;
-    cursor: pointer;
     display: inline-block;
     fill: none;
 }
 
-.hearte:hover {
+.like_status:hover .hearte {
     animation-name: hearte;
     animation-duration: 1s;
 }
@@ -1239,6 +1238,58 @@ hr {
     margin-right: auto;
 }
 
+.chart_block {
+    overflow: hidden;
+    transition: 0.3s;
+    z-index: -50;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    position: relative;
+    background-color: white;
+}
+
+.tittle_chart {
+    font-size: 30px;
+    color: #e74c3c;
+}
+
+.ct-perfect-fourth {
+    position: absolute;
+    top: 30%;
+    top: 0;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 500px;
+    height: 270px;
+    background-color: white;
+ }
+
+ .off_button {
+    transition: 0.8s;
+    width: 30px;
+    top: 0;
+    transform: translateX(-100%);
+    background-color: #e74c3c;
+    color: white;
+    left: 100%;
+    position: absolute;
+    z-index: 100;
+    cursor: pointer;
+    height: 30px;
+}
+
+.off {
+    font-size: 19px;
+    margin-top: 4.5px;
+}
+
+.off_button:hover {
+    box-shadow: 0 5px 13px 2px #000000;
+}
+
 #img_team_one {
     transform: translate(-610px,136px);
 }
@@ -1293,10 +1344,6 @@ hr {
     position: relative;
     opacity: 0;        
     margin-top: 91px;
-}
-
-.text_team_block_one {
-    margin-left: 100px;
 }
 
 .fill {
@@ -1405,6 +1452,10 @@ hr {
     float: left;
 }
 
+.img_block_blog:nth-child(n+1):nth-child(-n+2) {
+    margin-bottom: 2px;
+}
+
 #one_two_text {
     padding-right: 50px;
     box-sizing: border-box;
@@ -1493,10 +1544,13 @@ hr {
 
 .Contact_Information {
     padding-top: 32px;
+    padding-bottom: 32px;
     padding-left: 88px;
+    padding-right: 88px;
     margin-right: 30px;
+    position: relative;
     width: 475px;
-    height: 565px;
+    min-height: 565px;
     text-align: left;
     display: inline-block;
     box-shadow: 0 3px 5px 0 rgba(0,0,0,.1);
@@ -1510,10 +1564,10 @@ hr {
     box-sizing: border-box;
     padding: 20px;
     vertical-align: top;
+    min-height: 565px;
     padding-right: 99px;
     padding-left: 101px;
     padding-top: 69px;
-    height: 565px;
     text-align: left;
     box-shadow: 0 5px 5px 0 rgba(0,0,0,.1);
     background-color: #ffffff;
@@ -1528,7 +1582,18 @@ hr {
     font-size: 24px;
     font-weight: 400;
     line-height: 24px;
-    padding-top: 63px;
+    margin-top: 63px;
+}
+
+.contact_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.tittle_contact:nth-child(1) {
+    margin-top: 0px;
 }
 
 .info_contact {
@@ -1538,7 +1603,7 @@ hr {
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
-    padding-top: 19px;
+    margin-top: 19px;
 }
 
 .info_check_in {
@@ -1546,8 +1611,7 @@ hr {
     width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
-    padding-top: 6px;
-    padding-bottom: 16px;
+    height: 30px;
     display: block;
     color: #6a6a6a;
     border: none;
@@ -1566,7 +1630,7 @@ hr {
     transition: 0.8s;
     color: #fff;
     font-size: 14px;
-    background-color: #e74c3c;
+    background-color: #C0C0C0;
 }
 
 .check_in_button:hover {
@@ -1621,3 +1685,4 @@ hr {
     display: inline-block;
     margin-right: 10px;
 }
+

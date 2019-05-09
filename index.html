@@ -550,9 +550,9 @@
                 <!-- <div class = "img_team_block"> -->
                     <div class = "img_team" id = "img_team_one">
                         <img class = "img" src = "bino.image/Ellipse_1.png">
-                        <div class = "text_team_block" id = "text_team_block_one">
-                            <svg width="1" height="64" class = "fill">        
-                                    <rect width="1" height="64" fill = "white"/>
+                        <div class = "text_team_block">
+                            <svg width="1" height="84" class = "fill">        
+                                <rect width="1" height="64" fill = "white"/>
                             </svg>
                             <h1 class = "tittle_team_img">Kazi Erfan</h1>
                             <p class = "text_team">UI/UX Designer</p>
@@ -563,19 +563,27 @@
                     <div class = "img_team" id = "img_team_two">
                         <img class = "img" src = "bino.image/Ellipse_123.png">
                         <div class = "text_team_block">
-                                <svg width="1" height="64" class = "fill">        
-                                        <rect width="1" height="64" fill = "white"/>
+                                <svg width="1" height="84" class = "fill">        
+                                    <rect width="1" height="64" fill = "white"/>
                                     </svg>
                             <h1 class = "tittle_team_img">Kazi Erfan</h1>
                             <p class = "text_team">UI/UX Designer</p>
                         </div>
                     </div>
 
+                    <div class = "chart_block" id = "cggg">
+                        <h1 class = tittle_chart>Chart</h1>
+                        <div class = "off_button">
+                                <h1 class = "off">X</h1>
+                        </div>
+                        <div class="ct-chart ct-perfect-fourth"></div>
+                    </div>
+
                     <div class = "img_team" id = "img_team_three">
                         <img class = "img" src = "bino.image/team3.png">
                         <div class = "text_team_block">
-                                <svg width="1" height="64" class = "fill">        
-                                        <rect width="1" height="64" fill = "white"/>
+                                <svg width="1" height="84" class = "fill">        
+                                    <rect width="1" height="64" fill = "white"/>
                                     </svg>
                             <h1 class = "tittle_team_img">Kazi Erfan</h1>
                             <p class = "text_team">UI/UX Designer</p>
@@ -585,9 +593,9 @@
                     <div class = "img_team" id = "img_team_four">
                         <img class = "img" src = "bino.image/team4.png">
                         <div class = "text_team_block">
-                                <svg width="1" height="64" class = "fill">        
-                                        <rect width="1" height="64" fill = "white"/>
-                                    </svg>
+                                <svg width="1" height="84" class = "fill">        
+                                    <rect width="1" height="64" fill = "white"/>
+                                </svg>
                             <h1 class = "tittle_team_img">Kazi Erfan</h1>
                             <p class = "text_team">UI/UX Designer</p>
                         </div>
@@ -597,7 +605,7 @@
                         <img class = "img" src = "bino.image/team5.png">
                         <div class = "text_team_block">
                             <svg width="1" height="64" class = "fill">        
-                                <rect width="1" height="64" fill = "white"/>
+                                <rect width="1" height="84" fill = "white"/>
                             </svg>
                             <h1 class = "tittle_team_img">Kazi Erfan</h1>
                             <p class = "text_team">UI/UX Designer</p>
@@ -742,17 +750,19 @@
             <hr class = "hr">
             <div class = "check_in_block">
                 <div class = "Contact_Information">
-                    <p class = "tittle_contact">OUR ADDRESS</p>
-                    <p class = "info_contact">House #13, Streat road, Sydney 2310 Australia</p>
-                    <p class = "tittle_contact">CALL US</p>
-                    <p class = "info_contact">+ 880 168 109 1425 +0216809142</p>
-                    <p class = "tittle_contact">EMAIL US</p>
-                    <p class = "info_contact">contactus@email.com</p>
+                    <div class = "contact_content">
+                        <p class = "tittle_contact">OUR ADDRESS</p>
+                        <p class = "info_contact">House #13, Streat road, Sydney 2310 Australia</p>
+                        <p class = "tittle_contact">CALL US</p>
+                        <p class = "info_contact">+ 880 168 109 1425 +0216809142</p>
+                        <p class = "tittle_contact">EMAIL US</p>
+                        <p class = "info_contact">contactus@email.com</p>
+                    </div>
                 </div>
 
                 <div class = "check_in">
                     <div class = "form">
-                        <input name = "name" placeholder = "Name" type = "text" class = "info_check_in">
+                        <input name = "name" placeholder = "Name" type = "text" class = "info_check_in" id = "Name">
                         <input name = "name" placeholder = "Email" type = "text" class = "info_check_in" id = "Email">
                         <input name = "name" placeholder = "Subject" type = "text" class = "info_check_in">
                         <textarea name = "name" placeholder = "Message" type = "text" class = "info_check_in" id = "textarea"></textarea>
@@ -781,7 +791,6 @@
             </div>
         </div>
 
-        <div class="ct-chart ct-perfect-fourth"></div>
         <script>
             var data = {
   labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],

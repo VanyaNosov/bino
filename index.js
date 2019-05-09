@@ -14,6 +14,9 @@ const slidContentThree = document.getElementById("slid_content_three");
 const OneSlid = document.getElementById("one_slid");
 const TwoSlid = document.getElementById("two_slid");
 const ThreeSlid = document.getElementById("three_slid");
+let Chart = document.getElementById("cggg");
+let OffButton = document.getElementById("off_button");
+let TeamMans = document.getElementsByClassName('img_team');
 
 buttom_top1.addEventListener('click', () => {
     buttom_slider_c1.style.backgroundColor = 'e74c3c';
@@ -91,18 +94,40 @@ function vanya () {
     }
 }
 
-function ReplaceEmail () {
-    let Email = document.getElementById("Email").value;
-    console.log(Email.value);
-    // Email = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-}
-ReplaceEmail();
+const DisabledButton = document.getElementById("check_in_button");
 
-function button () {
-    const DisabledButton = document.getElementById("check_in_button");
-    DisabledButton.style.backgroundColor = "black";
+
+let InputName = document.getElementById("Name").length;
+let reg = document.getElementById("Email").value;
+
+function ValidatorEmail (email) {
+    reg = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
+    return reg.test(email);
 }
-button();
+
+function InputValidator () {
+    if('gfgfgfgf'.length > 5 && ValidatorEmail("vanya@gmail.com")) {
+        DisabledButton.style.backgroundColor = "#e74c3c";
+        console.log('1')
+    }
+}
+InputValidator();
+
+let TeamMan = document.getElementById("img_team_three").addEventListener('click', function () {
+    Chart.style.zIndex = 50;
+});
+
+OffButton.addEventListener('click', function () {
+        Chart.style.zIndex = -50;
+}); 
+
+
+
+
+// function ChartTeamOn () {
+//     TeamMan.addEventListener('click', function () {
+        
+//     })
 
 // const vanyacha = document.getElementById('content');
 
