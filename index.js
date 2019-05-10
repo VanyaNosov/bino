@@ -14,9 +14,24 @@ const slidContentThree = document.getElementById("slid_content_three");
 const OneSlid = document.getElementById("one_slid");
 const TwoSlid = document.getElementById("two_slid");
 const ThreeSlid = document.getElementById("three_slid");
-let Chart = document.getElementById("cggg");
-let OffButton = document.getElementById("off_button");
-let TeamMans = document.getElementsByClassName('img_team');
+const Chart = document.getElementById("cggg");
+const OffButton = document.getElementById("off_button");
+const TeamMans = document.getElementsByClassName('img_team');
+const Input = document.getElementsByClassName('info_check_in');
+const DisabledButton = document.getElementById("check_in_button");
+const teamthree = document.getElementById("img_team_three");
+// let DisabledButton = document.getElementById("check_in_button").setAttribute("disabled", "true");
+let reg = document.getElementById("Email").value;
+const teaams = [];
+const list = [];
+
+for(let i = 0; i < Input.length; i++) {
+    list.push(Input[i]);
+}
+
+for(let i = 0; i < TeamMans.length; i++) {
+    teaams.push(TeamMans[i]);
+}
 
 buttom_top1.addEventListener('click', () => {
     buttom_slider_c1.style.backgroundColor = 'e74c3c';
@@ -94,28 +109,34 @@ function vanya () {
     }
 }
 
-const DisabledButton = document.getElementById("check_in_button");
-let InputName = document.getElementById("Name").length;
-let reg = document.getElementById("Email").value;
-
 function ValidatorEmail (email) {
     reg = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
     return reg.test(email);
 }
 
 function InputValidator () {
-    if('gfgfgfgf'.length > 5 && ValidatorEmail("vanya@gmail.com")) {
+    if('gffdfdf'.length > 5 && ValidatorEmail("vanya@gmail.com")) {
         DisabledButton.style.backgroundColor = "#e74c3c";
-        console.log('1')
+        for (let i = 0; i < list.length; i += 1) {
+            list[i].style.borderBottom = '1px solid #e74c3c';
+        }
     }
 }
+
 InputValidator();
 
 let TeamMan = document.getElementById("img_team_three").addEventListener('click', function () {
-    Chart.style.zIndex = 50;
+    Chart.style.zIndex = 100;
+    for (let i = 0; i < teaams.length; i += 1) {
+        teaams[i].style.zIndex = -50;
+    }
+    teamthree.style.zIndex = 50;
 });
 
 OffButton.addEventListener('click', function () {
+    for (let i = 0; i < teaams.length; i += 1) {
+        teaams[i].style.zIndex = 50;
+    }
     Chart.style.zIndex = -50;
 }); 
 

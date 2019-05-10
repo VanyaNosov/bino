@@ -559,7 +559,6 @@
                         </div>
                     </div>
 
-
                     <div class = "img_team" id = "img_team_two">
                         <img class = "img" src = "bino.image/Ellipse_123.png">
                         <div class = "text_team_block">
@@ -573,9 +572,7 @@
 
                     <div class = "chart_block" id = "cggg">
                         <h1 class = tittle_chart>Chart</h1>
-                        <div class = "off_button" id = "off_button">
-                                <h1 class = "off">X</h1>
-                        </div>
+                        <div class = "off_button" id = "off_button"><h1 class = "off">X</h1></div>
                         <div class="ct-chart ct-perfect-fourth"></div>
                     </div>
 
@@ -584,7 +581,7 @@
                         <div class = "text_team_block">
                                 <svg width="1" height="84" class = "fill">        
                                     <rect width="1" height="64" fill = "white"/>
-                                    </svg>
+                                </svg>
                             <h1 class = "tittle_team_img">Kazi Erfan</h1>
                             <p class = "text_team">UI/UX Designer</p>
                         </div>
@@ -791,40 +788,40 @@
             </div>
         </div>
 
-        <script>
-            var data = {
-  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-    series: [
-    [5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8],
-    [3, 2, 9, 5, 4, 6, 4, 6, 7, 8, 7, 4]
-  ]
-};
+<script>
+    var data = {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            series: [
+            [5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8],
+            [3, 2, 9, 5, 4, 6, 4, 6, 7, 8, 7, 4]
+        ]
+        };
 
-var options = {
-  seriesBarDistance: 15
-};
+        var options = {
+        seriesBarDistance: 15
+        };
 
-var responsiveOptions = [
-  ['screen and (min-width: 641px) and (max-width: 1024px)', {
-    seriesBarDistance: 10,
-    axisX: {
-      labelInterpolationFnc: function (value) {
-        return value;
-      }
-    }
-  }],
-  ['screen and (max-width: 640px)', {
-    seriesBarDistance: 5,
-    axisX: {
-      labelInterpolationFnc: function (value) {
-        return value[0];
-      }
-    }
-  }]
-];
+        var responsiveOptions = [
+        ['screen and (min-width: 641px) and (max-width: 1024px)', {
+            seriesBarDistance: 10,
+            axisX: {
+            labelInterpolationFnc: function (value) {
+                return value;
+            }
+            }
+        }],
+        ['screen and (max-width: 640px)', {
+            seriesBarDistance: 5,
+            axisX: {
+            labelInterpolationFnc: function (value) {
+                return value[0];
+            }
+            }
+        }]
+        ];
 
-new Chartist.Bar('.ct-chart', data, options, responsiveOptions);
-        </script>
+        new Chartist.Bar('.ct-chart', data, options, responsiveOptions);
+</script>
         <script src="index.js"></script>
     </body>
 </html>     
