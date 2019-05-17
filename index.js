@@ -14,24 +14,92 @@ const slidContentThree = document.getElementById("slid_content_three");
 const OneSlid = document.getElementById("one_slid");
 const TwoSlid = document.getElementById("two_slid");
 const ThreeSlid = document.getElementById("three_slid");
-const Chart = document.getElementById("cggg");
-const OffButton = document.getElementById("off_button");
-const TeamMans = document.getElementsByClassName('img_team');
-const Input = document.getElementsByClassName('info_check_in');
+const chart1 = document.getElementById("c1");
+const chart2 = document.getElementById("c2");
+const chart3 = document.getElementById("c3");
+const chart4 = document.getElementById("c4");
+const chart5 = document.getElementById("c5");
+const statusOne = document.getElementById("Status_Favourites");
+const statusTwo = document.getElementById("Status_Posts_Last_24_Hours");
+const statusThree = document.getElementById("Status_Total_Posts");
+const statusFour= document.getElementById("Status_Campaigns");
+const statusFive = document.getElementById("Status_Amazing_Features");
+const OffButton = document.getElementsByClassName("off_button");
 const DisabledButton = document.getElementById("check_in_button");
-const teamthree = document.getElementById("img_team_three");
-// let DisabledButton = document.getElementById("check_in_button").setAttribute("disabled", "true");
-let reg = document.getElementById("Email").value;
-const teaams = [];
-const list = [];
+const status = document.getElementsByClassName("status");
+let Input = document.getElementsByClassName('info_check_in');
+let inputNam = document.getElementById("Name");
+let inputEm = document.getElementById("Email");
 
-for(let i = 0; i < Input.length; i++) {
-    list.push(Input[i]);
+// const list = [statusOne, statusTwo, statusThree, statusFour, statusFive];
+// function chart () {
+//     for(let i = 0; i < list.length; i++) {
+//         list[i].addEventListener('click', () => {
+//             chart1.style.display = "inline-block";
+//         })
+//     }
+// }
+// chart();
+
+const OffstatusOn = () => {
+    for(let i = 0; i < status.length; i++) {
+        status[i].style.display = 'none';
+    }
 }
 
-for(let i = 0; i < TeamMans.length; i++) {
-    teaams.push(TeamMans[i]);
+function chart () {
+    statusOne.addEventListener('click', () => {
+        OffstatusOn();
+        chart1.style.display = "inline-block";
+    })
+
+    statusTwo.addEventListener('click', () => {
+        OffstatusOn();
+        chart2.style.display = "inline-block";
+    })
+
+    statusThree.addEventListener('click', () => {
+        OffstatusOn();
+        chart3.style.display = "inline-block";
+    })
+
+    statusFour.addEventListener('click', () => {
+        OffstatusOn();
+        chart4.style.display = "inline-block";
+    })
+
+    statusFive.addEventListener('click', () => {
+        OffstatusOn();
+        chart5.style.display = "inline-block";
+    })
 }
+
+chart();
+
+for(let i = 0; i < OffButton.length; i++) {
+    OffButton[i].addEventListener('click', () => {
+        for(let i = 0; i < status.length; i++) {
+            status[i].style.display = 'inline-block';
+        }
+        chart1.style.display = 'none';
+        chart2.style.display = 'none';
+        chart3.style.display = 'none';
+        chart4.style.display = 'none';
+        chart5.style.display = 'none';
+    })
+}
+
+// for (let i = 0; i < list.length; i += 1) {
+//     list[i].style.backgroundColor = 'black';
+//     console.log(list[i]);
+// }
+
+
+// const teaams = [];
+
+// for(let i = 0; i < TeamMans.length; i++) {
+//     teaams.push(TeamMans[i]);
+// }
 
 buttom_top1.addEventListener('click', () => {
     buttom_slider_c1.style.backgroundColor = 'e74c3c';
@@ -109,39 +177,73 @@ function vanya () {
     }
 }
 
+// OffButton.addEventListener('click', function () {
+    // chart1.style.display = 'none';
+    // chart2.style.display = 'none';
+    // chart3.style.display = 'none';
+    // chart4.style.display = 'none';
+    // for(let i = 0; i < OffButton.length; i++) {
+    //     list[i].style.backgroundColor = 'black';
+    // }
+// }); 
+
+
 function ValidatorEmail (email) {
-    reg = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
+    const reg = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
     return reg.test(email);
 }
 
-function InputValidator () {
-    if('gffdfdf'.length > 5 && ValidatorEmail("vanya@gmail.com")) {
-        DisabledButton.style.backgroundColor = "#e74c3c";
-        for (let i = 0; i < list.length; i += 1) {
-            list[i].style.borderBottom = '1px solid #e74c3c';
-        }
+
+function InputValidator (e) {
+    if(e.Name.selectionEnd > 5 && ValidatorEmail(e.Email.value)) {
+        DisabledButton.style.backgroundColor = 'red';
+    }else {
+        DisabledButton.style.backgroundColor = '#C0C0C0';
+    }
+    
+    if(ValidatorEmail(e.Email.value)) {
+        inputEm.style.borderBottom = '2px solid #32CD32';
+    }else {
+        inputEm.style.borderBottom = '2px solid #C0C0C0';
+    }
+
+    if(e.Name.selectionEnd > 5) {
+        inputNam.style.borderBottom = '2px solid #32CD32';
+    }else {
+        inputNam.style.borderBottom = '2px solid #C0C0C0';
     }
 }
 
-InputValidator();
+inputNam.addEventListener('input', () => {InputValidator(Input)})
+inputEm.addEventListener('input', () => {InputValidator(Input)})
 
-let TeamMan = document.getElementById("img_team_three").addEventListener('click', function () {
-    Chart.style.zIndex = 100;
-    for (let i = 0; i < teaams.length; i += 1) {
-        teaams[i].style.zIndex = -50;
-    }
-    teamthree.style.zIndex = 50;
-});
-
-OffButton.addEventListener('click', function () {
-    for (let i = 0; i < teaams.length; i += 1) {
-        teaams[i].style.zIndex = 50;
-    }
-    Chart.style.zIndex = -50;
-}); 
-
+    // if(ValidatorEmail("vanya@gmail.com")) {
+    //     DisabledButton.style.backgroundColor = "#e74c3c";
+    //     for (let i = 0; i < list.length; i += 1) {
+    //         list[i].style.borderBottom = '1px solid #e74c3c';
+    //     }
+    // }
+    // if(ValidatorEmail("vanya@gmail.com")) {
+    //     DisabledButton.style.backgroundColor = "#e74c3c";
+    //     for (let i = 0; i < list.length; i += 1) {
+    //         list[i].style.borderBottom = '1px solid #e74c3c';
+    //     }
+    // }
 
 
+
+// let TeamMan = document.getElementById("img_team_three").addEventListener('click', function () {
+//     Chart.style.zIndex = 100;
+//     for (let i = 0; i < teaams.length; i += 1) {
+//         teaams[i].style.zIndex = -50;
+//     }
+//     teamthree.style.zIndex = 50;
+// });
+
+
+   // for (let i = 0; i < teaams.length; i += 1) {
+    //     teaams[i].style.zIndex = 50;
+    // }
 
 
 

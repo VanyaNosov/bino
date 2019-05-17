@@ -987,13 +987,65 @@ hr {
     left: 50%;
 }
 
+.chart_block {
+    overflow: hidden;
+    transition: 0.3s;
+    z-index: 100;
+    transform: translate(-50%,-50%);
+    width: 800px;
+    height: 500px;
+    /* display: none; */
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    background-color: white;
+}
+
+.tittle_chart {
+    font-size: 30px;
+    color: #e74c3c;
+}
+
+.ct-perfect-fourth {
+    display: block;
+    width: 100%;
+    height: 95%;
+    position: absolute;
+    top: 30%;
+    top: 0;
+    transform: translateX(-50%);
+    left: 50%;
+    background-color: white;
+ }
+
+ .off_button {
+    transition: 0.8s;
+    width: 30px;
+    top: 0;
+    transform: translateX(-100%);
+    background-color: #e74c3c;
+    color: white;
+    left: 100%;
+    position: absolute;
+    z-index: 100;
+    cursor: pointer;
+    height: 30px;
+}
+
+.off {
+    font-size: 19px;
+    margin-top: 4.5px;
+}
+
 .status {
+    transition: 8s;
     width: 15%;
     position: relative;
     display: inline-block;
 }
 
 .like_status {
+    cursor: pointer;
     position: relative;
     width: 110px;
     height: 110px;
@@ -1238,54 +1290,6 @@ hr {
     margin-right: auto;
 }
 
-.chart_block {
-    overflow: hidden;
-    transition: 0.3s;
-    z-index: -50;
-    transform: translate(-50%,-50%);
-    width: 500px;
-    height: 300px;
-    top: 50%;
-    left: 50%;
-    position: relative;
-    background-color: white;
-}
-
-.tittle_chart {
-    font-size: 30px;
-    color: #e74c3c;
-}
-
-.ct-perfect-fourth {
-    position: absolute;
-    top: 30%;
-    top: 0;
-    transform: translateX(-50%);
-    left: 50%;
-    width: 500px;
-    height: 270px;
-    background-color: white;
- }
-
- .off_button {
-    transition: 0.8s;
-    width: 30px;
-    top: 0;
-    transform: translateX(-100%);
-    background-color: #e74c3c;
-    color: white;
-    left: 100%;
-    position: absolute;
-    z-index: 100;
-    cursor: pointer;
-    height: 30px;
-}
-
-.off {
-    font-size: 19px;
-    margin-top: 4.5px;
-}
-
 .off_button:hover {
     box-shadow: 0 5px 13px 2px #000000;
 }
@@ -1516,8 +1520,10 @@ hr {
 }
 
 .button_blog {
+    padding: 0px 20px 0px 20px;
     margin-top: 49px;
     margin-bottom: 20px;
+    margin-left: -20px;
     display: inline-block;
     color: #ffffff;
     cursor: pointer;
