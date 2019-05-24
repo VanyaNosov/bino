@@ -15,91 +15,124 @@ const OneSlid = document.getElementById("one_slid");
 const TwoSlid = document.getElementById("two_slid");
 const ThreeSlid = document.getElementById("three_slid");
 const chart1 = document.getElementById("c1");
-const chart2 = document.getElementById("c2");
-const chart3 = document.getElementById("c3");
-const chart4 = document.getElementById("c4");
-const chart5 = document.getElementById("c5");
 const statusOne = document.getElementById("Status_Favourites");
 const statusTwo = document.getElementById("Status_Posts_Last_24_Hours");
 const statusThree = document.getElementById("Status_Total_Posts");
 const statusFour= document.getElementById("Status_Campaigns");
 const statusFive = document.getElementById("Status_Amazing_Features");
-const OffButton = document.getElementsByClassName("off_button");
 const DisabledButton = document.getElementById("check_in_button");
-const status = document.getElementsByClassName("status");
+const OffButton = document.getElementById("off_button");
+const body = document.getElementById("body");
+const overflow = document.createElement('div');
+let tittleChart = document.getElementById("tittle_chart");
 let Input = document.getElementsByClassName('info_check_in');
 let inputNam = document.getElementById("Name");
 let inputEm = document.getElementById("Email");
 
-// const list = [statusOne, statusTwo, statusThree, statusFour, statusFive];
-// function chart () {
-//     for(let i = 0; i < list.length; i++) {
-//         list[i].addEventListener('click', () => {
-//             chart1.style.display = "inline-block";
-//         })
-//     }
-// }
-// chart();
+chart1.style.display = 'none';
 
-const OffstatusOn = () => {
-    for(let i = 0; i < status.length; i++) {
-        status[i].style.display = 'none';
+OffButton.addEventListener('click', () => {
+    chart1.style.display = 'none';
+    overflow.style.display = 'none';
+    body.style.position = '';
+    body.style.overflow = 'visible';
+})
+
+function generateData () {
+    let i = 0;
+    const arrayOfNumbers = [];
+    while (i < 2) {
+      i += 1;
+      arrayOfNumbers.push(Array.from({length: 12}, () => Math.floor(Math.random() * 10)));
+    }
+  
+    return {
+      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+      series: arrayOfNumbers,
     }
 }
 
-function chart () {
+function modal() {
+    overflow.className = 'overflow';
+    body.style.position = 'relative';
+    document.body.appendChild(overflow);
+    overflow.style.display = 'block';
+}
+
+function chartOnStyle () {
+    body.style.overflow = 'hidden';
+    body.style.zIndex = '100';
+}
+
+function chartOn () {
     statusOne.addEventListener('click', () => {
-        OffstatusOn();
+        chart(generateData());
+        tittleChart.innerHTML = 'User Favourites';
         chart1.style.display = "inline-block";
+        chartOnStyle();
+        modal(); 
     })
 
     statusTwo.addEventListener('click', () => {
-        OffstatusOn();
-        chart2.style.display = "inline-block";
+        chart(generateData());
+        tittleChart.innerHTML = 'Posts Last 24 Hours';
+        chart1.style.display = "inline-block";
+        chartOnStyle();
+        modal(); 
     })
 
     statusThree.addEventListener('click', () => {
-        OffstatusOn();
-        chart3.style.display = "inline-block";
+        chart(generateData());
+        tittleChart.innerHTML = 'Total Posts';
+        chart1.style.display = "inline-block";
+        chartOnStyle();
+        modal(); 
     })
 
     statusFour.addEventListener('click', () => {
-        OffstatusOn();
-        chart4.style.display = "inline-block";
+        chart(generateData());
+        tittleChart.innerHTML = 'Campaigns';
+        chart1.style.display = "inline-block";
+        chartOnStyle();
+        modal(); 
     })
 
     statusFive.addEventListener('click', () => {
-        OffstatusOn();
-        chart5.style.display = "inline-block";
+        chart(generateData());
+        tittleChart.innerHTML = 'Amazing Features';
+        chart1.style.display = "inline-block";
+        chartOnStyle();
+        modal(); 
     })
 }
 
-chart();
+chartOn();
 
-for(let i = 0; i < OffButton.length; i++) {
-    OffButton[i].addEventListener('click', () => {
-        for(let i = 0; i < status.length; i++) {
-            status[i].style.display = 'inline-block';
+function chart (chartStatistics) {
+    const options = {
+        seriesBarDistance: 15
+    };
+
+    const responsiveOptions = [
+        ['screen and (min-width: 641px) and (max-width: 1024px)', {
+            seriesBarDistance: 10,
+            axisX: {
+            labelInterpolationFnc: function (value) {
+                return value;
+            }
         }
-        chart1.style.display = 'none';
-        chart2.style.display = 'none';
-        chart3.style.display = 'none';
-        chart4.style.display = 'none';
-        chart5.style.display = 'none';
-    })
+    }],
+        ['screen and (max-width: 640px)', {
+            seriesBarDistance: 5,
+            axisX: {
+            labelInterpolationFnc: function (value) {
+                return value[0];
+            }
+        }
+    }]
+];
+    new Chartist.Bar('.ct-chart', chartStatistics, options, responsiveOptions);
 }
-
-// for (let i = 0; i < list.length; i += 1) {
-//     list[i].style.backgroundColor = 'black';
-//     console.log(list[i]);
-// }
-
-
-// const teaams = [];
-
-// for(let i = 0; i < TeamMans.length; i++) {
-//     teaams.push(TeamMans[i]);
-// }
 
 buttom_top1.addEventListener('click', () => {
     buttom_slider_c1.style.backgroundColor = 'e74c3c';
@@ -177,17 +210,6 @@ function vanya () {
     }
 }
 
-// OffButton.addEventListener('click', function () {
-    // chart1.style.display = 'none';
-    // chart2.style.display = 'none';
-    // chart3.style.display = 'none';
-    // chart4.style.display = 'none';
-    // for(let i = 0; i < OffButton.length; i++) {
-    //     list[i].style.backgroundColor = 'black';
-    // }
-// }); 
-
-
 function ValidatorEmail (email) {
     const reg = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
     return reg.test(email);
@@ -216,6 +238,20 @@ function InputValidator (e) {
 
 inputNam.addEventListener('input', () => {InputValidator(Input)})
 inputEm.addEventListener('input', () => {InputValidator(Input)})
+
+// for(let i = 0; i < OffButton.length; i++) {
+//     OffButton[i].addEventListener('click', () => {
+//         for(let i = 0; i < status.length; i++) {
+//             status[i].style.display = 'inline-block';
+//         }
+//         chart1.style.display = 'none';
+//     })
+// }
+// const OffstatusOn = () => {
+//     for(let i = 0; i < status.length; i++) {
+//         status[i].style.display = 'none';
+//     }
+// }
 
     // if(ValidatorEmail("vanya@gmail.com")) {
     //     DisabledButton.style.backgroundColor = "#e74c3c";

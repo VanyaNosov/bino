@@ -7,7 +7,7 @@
         <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
 
     </head>
-        <body>
+        <body id = "body">
             <div class = "navigator">   
                 <div class = "header">
                     <div class = "logo">
@@ -425,12 +425,12 @@
         </div>
 
         <div class = "status_container">
-            <div class = 'status_block'>
                 <div class = "chart_block" id = "c1">
-                        <h1 class = tittle_chart>User Favourites</h1>
-                        <div class = "off_button" id = "off_button"><h1 class = "off">X</h1></div>
-                    <div class="ct-chart ct-perfect-fourth"></div>
+                    <h1 class = tittle_chart id = 'tittle_chart'>User Favourites</h1>
+                    <div class = "off_button" id = "off_button"><h1 class = "off">X</h1></div>
+                    <div class="ct-chart ct-perfect-fourth" id = "ffff"></div>
                 </div>
+            <div class = 'status_block'>
 
                 <div class = "status" id = "Status_Favourites">
                     <div class = "like_status">
@@ -441,12 +441,12 @@
                     <p class = "quantity_status">3891</p>
                     <p class = "text_status">User Favourites</p>
                 </div>
-
+<!-- 
                 <div class = "chart_block" id = "c2">
                     <h1 class = tittle_chart>Posts Last 24 Hours</h1>
                     <div class = "off_button" id = "off_button"><h1 class = "off">X</h1></div>
                     <div class="ct-chart2 ct-perfect-fourth"></div>
-                </div>
+                </div> -->
 
                 <div class = "status" id = "Status_Posts_Last_24_Hours">
                     <div class = "like_status">
@@ -458,11 +458,11 @@
                     <p class = "text_status">Posts Last 24 Hours</p>
                 </div>
 
-                <div class = "chart_block" id = "c3">
+                <!-- <div class = "chart_block" id = "c3">
                     <h1 class = tittle_chart>Total Posts</h1>
                     <div class = "off_button" id = "off_button"><h1 class = "off">X</h1></div>
                     <div class="ct-chart3 ct-perfect-fourth"></div>
-                </div>
+                </div> -->
 
                 <div class = "status" id = "Status_Total_Posts">
                     <div class = "like_status">
@@ -474,11 +474,11 @@
                     <p class = "text_status">Total Posts</p>        
                 </div>
 
-                <div class = "chart_block" id = "c4">
+                <!-- <div class = "chart_block" id = "c4">
                     <h1 class = tittle_chart>Campaigns</h1>
                     <div class = "off_button" id = "off_button"><h1 class = "off">X</h1></div>
                     <div class="ct-chart4 ct-perfect-fourth"></div>
-                </div>
+                </div> -->
         
                 <div class = "status" id = "Status_Campaigns">
                     <div class = "like_status">
@@ -490,11 +490,11 @@
                     <p class = "text_status">Campaigns</p>                   
                 </div>
 
-                <div class = "chart_block" id = "c5">
+                <!-- <div class = "chart_block" id = "c5">
                     <h1 class = tittle_chart>Amazing Features</h1>
                     <div class = "off_button" id = "off_button"><h1 class = "off">X</h1></div>
                     <div class="ct-chart5 ct-perfect-fourth"></div>
-                </div>
+                </div> -->
          
                 <div class = "status" id = "Status_Amazing_Features">
                     <div class = "like_status">
@@ -812,7 +812,7 @@
             </div>
         </div>
 
-<script>
+<!-- <script>
     var data = {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
             series: [
@@ -821,33 +821,33 @@
         ]
         };
 
-        var options = {
+    var options = {
         seriesBarDistance: 15
-        };
+    };
 
-        var responsiveOptions = [
+    var responsiveOptions = [
         ['screen and (min-width: 641px) and (max-width: 1024px)', {
             seriesBarDistance: 10,
             axisX: {
             labelInterpolationFnc: function (value) {
                 return value;
             }
-            }
-        }],
+        }
+    }],
         ['screen and (max-width: 640px)', {
             seriesBarDistance: 5,
             axisX: {
             labelInterpolationFnc: function (value) {
                 return value[0];
             }
-            }
-        }]
-        ];
+        }
+    }]
+];
 
         new Chartist.Bar('.ct-chart', data, options, responsiveOptions);
-</script>
+</script> -->
 
-<script>
+<!-- <script>
         var data = {
             labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
                 series: [
@@ -985,7 +985,7 @@
             ];
     
             new Chartist.Bar('.ct-chart5', data, options, responsiveOptions);
-</script>
+</script>  -->
         <script src="index.js"></script>
     </body>
 </html>     
