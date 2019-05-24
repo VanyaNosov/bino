@@ -425,11 +425,7 @@
         </div>
 
         <div class = "status_container">
-                <div class = "chart_block" id = "c1">
-                    <h1 class = tittle_chart id = 'tittle_chart'>User Favourites</h1>
-                    <div class = "off_button" id = "off_button"><h1 class = "off">X</h1></div>
-                    <div class="ct-chart ct-perfect-fourth" id = "ffff"></div>
-                </div>
+              
             <div class = 'status_block'>
 
                 <div class = "status" id = "Status_Favourites">
@@ -812,180 +808,11 @@
             </div>
         </div>
 
-<!-- <script>
-    var data = {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-            series: [
-            [5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8],
-            [3, 2, 9, 5, 4, 6, 4, 6, 7, 8, 7, 4]
-        ]
-        };
-
-    var options = {
-        seriesBarDistance: 15
-    };
-
-    var responsiveOptions = [
-        ['screen and (min-width: 641px) and (max-width: 1024px)', {
-            seriesBarDistance: 10,
-            axisX: {
-            labelInterpolationFnc: function (value) {
-                return value;
-            }
-        }
-    }],
-        ['screen and (max-width: 640px)', {
-            seriesBarDistance: 5,
-            axisX: {
-            labelInterpolationFnc: function (value) {
-                return value[0];
-            }
-        }
-    }]
-];
-
-        new Chartist.Bar('.ct-chart', data, options, responsiveOptions);
-</script> -->
-
-<!-- <script>
-        var data = {
-            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-                series: [
-                [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 9, 8],
-                [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 9, 8]
-            ]
-            };
-    
-            var options = {
-            seriesBarDistance: 15
-            };
-    
-            var responsiveOptions = [
-            ['screen and (min-width: 641px) and (max-width: 1024px)', {
-                seriesBarDistance: 10,
-                axisX: {
-                labelInterpolationFnc: function (value) {
-                    return value;
-                }
-                }
-            }],
-            ['screen and (max-width: 640px)', {
-                seriesBarDistance: 5,
-                axisX: {
-                labelInterpolationFnc: function (value) {
-                    return value[0];
-                }
-                }
-            }]
-            ];
-    
-            new Chartist.Bar('.ct-chart2', data, options, responsiveOptions);
-</script>
-
-<script>
-        var data = {
-            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-                series: [
-                [5, 1, 7, 4, 2, 9, 10, 10, 8, 7, 5, 4],
-                [3, 7, 5, 3, 1, 8, 7, 4, 8, 2, 10, 7]
-            ]
-            };
-    
-            var options = {
-            seriesBarDistance: 15
-            };
-    
-            var responsiveOptions = [
-            ['screen and (min-width: 641px) and (max-width: 1024px)', {
-                seriesBarDistance: 10,
-                axisX: {
-                labelInterpolationFnc: function (value) {
-                    return value;
-                }
-                }
-            }],
-            ['screen and (max-width: 640px)', {
-                seriesBarDistance: 5,
-                axisX: {
-                labelInterpolationFnc: function (value) {
-                    return value[0];
-                }
-                }
-            }]
-            ];
-    
-            new Chartist.Bar('.ct-chart3', data, options, responsiveOptions);
-</script>
-
-<script>
-        var data = {
-            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-                series: [
-                [7, 3, 5, 9, 2, 6, 4, 8, 2, 5, 6, 3],
-                [4, 1, 6, 3, 7, 10, 5, 3, 7, 1, 4, 2]
-            ]
-            };
-    
-            var options = {
-            seriesBarDistance: 15
-            };
-    
-            var responsiveOptions = [
-            ['screen and (min-width: 641px) and (max-width: 1024px)', {
-                seriesBarDistance: 10,
-                axisX: {
-                labelInterpolationFnc: function (value) {
-                    return value;
-                }
-                }
-            }],
-            ['screen and (max-width: 640px)', {
-                seriesBarDistance: 5,
-                axisX: {
-                labelInterpolationFnc: function (value) {
-                    return value[0];
-                }
-                }
-            }]
-            ];
-    
-            new Chartist.Bar('.ct-chart4', data, options, responsiveOptions);
-</script>
-
-<script>
-        var data = {
-            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-                series: [
-                [2, 9, 3, 1, 2, 10, 5, 4, 2, 7, 4, 10],
-                [4, 6, 5, 6, 8, 4, 9, 2, 4, 6, 8, 7]
-            ]
-            };
-    
-            var options = {
-            seriesBarDistance: 15
-            };
-    
-            var responsiveOptions = [
-            ['screen and (min-width: 641px) and (max-width: 1024px)', {
-                seriesBarDistance: 10,
-                axisX: {
-                labelInterpolationFnc: function (value) {
-                    return value;
-                }
-                }
-            }],
-            ['screen and (max-width: 640px)', {
-                seriesBarDistance: 5,
-                axisX: {
-                labelInterpolationFnc: function (value) {
-                    return value[0];
-                }
-                }
-            }]
-            ];
-    
-            new Chartist.Bar('.ct-chart5', data, options, responsiveOptions);
-</script>  -->
+        <div class = "chart_block" id = "c1">
+            <h1 class = tittle_chart id = 'tittle_chart'>User Favourites</h1>
+            <div class = "off_button" id = "off_button"><h1 class = "off">X</h1></div>
+            <div class="ct-chart ct-perfect-fourth" id = "ffff"></div>
+        </div>
         <script src="index.js"></script>
     </body>
 </html>     

@@ -1005,7 +1005,7 @@ hr {
     left: 50%;
     top: 50%;
     width: 800px;
-    position: absolute;
+    position: fixed;
     height: 500px;
     display: none;
     background-color: white;

@@ -24,6 +24,27 @@ const DisabledButton = document.getElementById("check_in_button");
 const OffButton = document.getElementById("off_button");
 const body = document.getElementById("body");
 const overflow = document.createElement('div');
+const UF = [
+    [1,3,5,6,8,9,5,3,2,4,6,7],
+    [1,3,5,6,8,9,5,3,2,4,6,7]
+]
+const PLH = [
+    [8,2,8,10,2,4,1,5,9,2,4,5],
+    [5,3,5,2,9,4,5,8,6,10,3,4]
+]
+const TP = [
+    [4,7,3,8,8,7,3,6,1,5,9,10],
+    [5,9,2,3,9,4,8,6,8,3,2,5]
+]
+const Campaigns = [
+    [4,1,9,10,3,8,2,3,8,6,3,5],
+    [6,3,5,6,8,9,5,3,2,4,6,7]
+]
+const AF = [
+    [10,2,7,10,8,9,5,3,2,4,6,7],
+    [7,3,5,6,8,9,5,3,2,4,6,7]
+]
+
 let tittleChart = document.getElementById("tittle_chart");
 let Input = document.getElementsByClassName('info_check_in');
 let inputNam = document.getElementById("Name");
@@ -38,19 +59,31 @@ OffButton.addEventListener('click', () => {
     body.style.overflow = 'visible';
 })
 
-function generateData () {
-    let i = 0;
-    const arrayOfNumbers = [];
-    while (i < 2) {
-      i += 1;
-      arrayOfNumbers.push(Array.from({length: 12}, () => Math.floor(Math.random() * 10)));
+function generateData (type) {
+    switch (type) {
+        case 'one': type = UF;
+        break;
+
+        case 'two': type = PLH;
+        break;
+
+        case 'three': type = TP;
+        break;
+
+        case 'foure': type = Campaigns;
+        break;
+
+        case 'five': type = AF;
+        break;
     }
-  
+    chart1.style.display = "inline-block";
+    chartOnStyle();
+    modal(); 
     return {
-      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-      series: arrayOfNumbers,
-    }
-}
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        series: type,
+    };
+} 
 
 function modal() {
     overflow.className = 'overflow';
@@ -64,49 +97,33 @@ function chartOnStyle () {
     body.style.zIndex = '100';
 }
 
-function chartOn () {
-    statusOne.addEventListener('click', () => {
-        chart(generateData());
-        tittleChart.innerHTML = 'User Favourites';
-        chart1.style.display = "inline-block";
-        chartOnStyle();
-        modal(); 
-    })
 
-    statusTwo.addEventListener('click', () => {
-        chart(generateData());
-        tittleChart.innerHTML = 'Posts Last 24 Hours';
-        chart1.style.display = "inline-block";
-        chartOnStyle();
-        modal(); 
-    })
+statusOne.addEventListener('click', () => {
+    chart(generateData('one'));
+    tittleChart.innerHTML = 'User Favourites';
+})
 
-    statusThree.addEventListener('click', () => {
-        chart(generateData());
-        tittleChart.innerHTML = 'Total Posts';
-        chart1.style.display = "inline-block";
-        chartOnStyle();
-        modal(); 
-    })
+statusTwo.addEventListener('click', () => {
+    chart(generateData('two'));
+    tittleChart.innerHTML = 'Posts Last 24 Hours';
+})
 
-    statusFour.addEventListener('click', () => {
-        chart(generateData());
-        tittleChart.innerHTML = 'Campaigns';
-        chart1.style.display = "inline-block";
-        chartOnStyle();
-        modal(); 
-    })
+statusThree.addEventListener('click', () => {
+    chart(generateData('three'));
+    tittleChart.innerHTML = 'Total Posts';
+})
 
-    statusFive.addEventListener('click', () => {
-        chart(generateData());
-        tittleChart.innerHTML = 'Amazing Features';
-        chart1.style.display = "inline-block";
-        chartOnStyle();
-        modal(); 
-    })
-}
+statusFour.addEventListener('click', () => {
+    chart(generateData('foure'));
+    tittleChart.innerHTML = 'Campaigns';
+})
 
-chartOn();
+statusFive.addEventListener('click', () => {
+    chart(generateData('five'));
+    tittleChart.innerHTML = 'Amazing Features';
+})
+
+
 
 function chart (chartStatistics) {
     const options = {
@@ -239,136 +256,6 @@ function InputValidator (e) {
 inputNam.addEventListener('input', () => {InputValidator(Input)})
 inputEm.addEventListener('input', () => {InputValidator(Input)})
 
-// for(let i = 0; i < OffButton.length; i++) {
-//     OffButton[i].addEventListener('click', () => {
-//         for(let i = 0; i < status.length; i++) {
-//             status[i].style.display = 'inline-block';
-//         }
-//         chart1.style.display = 'none';
-//     })
-// }
-// const OffstatusOn = () => {
-//     for(let i = 0; i < status.length; i++) {
-//         status[i].style.display = 'none';
-//     }
-// }
-
-    // if(ValidatorEmail("vanya@gmail.com")) {
-    //     DisabledButton.style.backgroundColor = "#e74c3c";
-    //     for (let i = 0; i < list.length; i += 1) {
-    //         list[i].style.borderBottom = '1px solid #e74c3c';
-    //     }
-    // }
-    // if(ValidatorEmail("vanya@gmail.com")) {
-    //     DisabledButton.style.backgroundColor = "#e74c3c";
-    //     for (let i = 0; i < list.length; i += 1) {
-    //         list[i].style.borderBottom = '1px solid #e74c3c';
-    //     }
-    // }
-
-
-
-// let TeamMan = document.getElementById("img_team_three").addEventListener('click', function () {
-//     Chart.style.zIndex = 100;
-//     for (let i = 0; i < teaams.length; i += 1) {
-//         teaams[i].style.zIndex = -50;
-//     }
-//     teamthree.style.zIndex = 50;
-// });
-
-
-   // for (let i = 0; i < teaams.length; i += 1) {
-    //     teaams[i].style.zIndex = 50;
-    // }
-
-
-
-// function ChartTeamOn () {
-//     TeamMan.addEventListener('click', function () {
-        
-//     })
-
-// const vanyacha = document.getElementById('content');
-
-// let buttom_top1 = document.getElementById('buttom_slider1').addEventListener('click', () =>  changePosition('firstButton'));
-// let buttom_top2 = document.getElementById('buttom_slider2').addEventListener('click', () =>  changePosition('lastButton'));
-// let buttom_top3 = document.getElementById('buttom_slider3').addEventListener('click', () =>  changePosition('aaaaaButton'));
-
-// function changePosition (firstButton) {
-//     if (firstButton === 'firstButton') {
-//         vanyacha.style.top = 0 + 'px';
-//     };
-
-//     if (firstButton === 'lastButton') {
-//         vanyacha.style.top = 0 + 'px';  
-//         vanyacha.style.top = - 500 + 'px';
-//     };
-
-//     if (firstButton === 'aaaaaButton') {
-//         vanyacha.style.top = 0 + 'px';
-//         vanyacha.style.top = - 1000 + 'px';
-//     };
-// };
-
-
-// let buttom_top1 = document.getElementById('buttom_slider1').addEventListener('click', () => {
-//     vanyacha.style.top = 0 + 'px';
-//     vanyacha.style.top = 0 + 'px';
-// });
-
-// let buttom_top2 = document.getElementById('buttom_slider2').addEventListener('click', () => {
-//     vanyacha.style.top = 0 + 'px';  
-//     vanyacha.style.top =  - 500 + 'px';
-// });
-
-// let buttom_top3 = document.getElementById('buttom_slider3').addEventListener('click', () => {
-//     vanyacha.style.top = 0 + 'px';  
-//     vanyacha.style.top =  - 1000  + 'px';
-// });
-
-
-
-
-
-
-
-
-
-
-
-
-// let buttom_top = document.getElementById('buttom_slider1').onclick = scrollBottom(0,500);
-// let bottom_bottom = document.getElementById('buttom_slider2').onclick = scrollBottom(1000,0);
-
-
-// function scrollBottom (first,last) {
-//     const vanyacha = document.getElementById('content');
-//     last = 500;
-//     first = 1000;
-
-//     if(last) {
-//         vanyacha.style.bottom = last + 'px';
-//     }
-
-//     if() {
-//         vanyacha.style.bottom = first + 'px';
-// }
-
-// let scrollValueTop = 0;
-
-// function scrollBottom () {
-//     const vanyacha = document.getElementById('content');
-//     scrollValueTop = scrollValueTop - 250;
-//     buttom_top = vanyacha.style.top = scrollValueTop + 'px';
-// }
-
-// let scrollValueButtom = 0;
-
-// function scrollBottom_bottom () {
-//     const vanyacha = document.getElementById('content');
-//     scrollValueButtom = scrollValueButtom - 250;
-//     bottom_bottom = vanyacha.style.bottom = scrollValueButtom + 'px';
-// }
 
 
 
