@@ -90,6 +90,12 @@ function modal() {
     body.style.position = 'relative';
     document.body.appendChild(overflow);
     overflow.style.display = 'block';
+    overflow.addEventListener('click', () => {
+        chart1.style.display = 'none';
+        overflow.style.display = 'none';
+        body.style.position = '';
+        body.style.overflow = 'visible';
+    })
 }
 
 function chartOnStyle () {
@@ -122,8 +128,6 @@ statusFive.addEventListener('click', () => {
     chart(generateData('five'));
     tittleChart.innerHTML = 'Amazing Features';
 })
-
-
 
 function chart (chartStatistics) {
     const options = {
@@ -232,7 +236,6 @@ function ValidatorEmail (email) {
     return reg.test(email);
 }
 
-
 function InputValidator (e) {
     if(e.Name.selectionEnd > 5 && ValidatorEmail(e.Email.value)) {
         DisabledButton.style.backgroundColor = 'red';
@@ -256,9 +259,14 @@ function InputValidator (e) {
 inputNam.addEventListener('input', () => {InputValidator(Input)})
 inputEm.addEventListener('input', () => {InputValidator(Input)})
 
-
-
-
+document.addEventListener('keydown', function(event) {
+    if(event.keyCode === 27) {
+        chart1.style.display = 'none';
+        overflow.style.display = 'none';
+        body.style.position = '';
+        body.style.overflow = 'visible';
+    }
+})
 
 
 
