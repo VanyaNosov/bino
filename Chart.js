@@ -1,4 +1,4 @@
-function chart (chartStatistics) {
+export function chart (chartStatistics) {
     const options = {
       seriesBarDistance: 15
   };

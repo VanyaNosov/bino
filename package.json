@@ -1,0 +1,28 @@
+{
+  "name": "bino",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "chartist": "^0.11.0",
+    "eslint-plugin-json": "^1.4.0",
+    "eslint": "^5.16.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3"
+  },
+  "scripts": {
+    "dev": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VanyaNosov/bino.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VanyaNosov/bino/issues"
+  },
+  "homepage": "https://github.com/VanyaNosov/bino#readme"
+}
+

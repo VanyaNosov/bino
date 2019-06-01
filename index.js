@@ -1,3 +1,5 @@
+import {chart} from './Chart';
+
 const vanyacha = document.getElementById('content');
 const buttom_top1 = document.getElementById('buttom_slider1');
 const buttom_top2 = document.getElementById('buttom_slider2');
@@ -52,11 +54,15 @@ let inputEm = document.getElementById("Email");
 
 chart1.style.display = 'none';
 
-OffButton.addEventListener('click', () => {
+function ofChart () {
     chart1.style.display = 'none';
     overflow.style.display = 'none';
     body.style.position = '';
     body.style.overflow = 'visible';
+}
+
+OffButton.addEventListener('click', () => {
+    ofChart()
 })
 
 function generateData (type) {
@@ -91,10 +97,7 @@ function modal() {
     document.body.appendChild(overflow);
     overflow.style.display = 'block';
     overflow.addEventListener('click', () => {
-        chart1.style.display = 'none';
-        overflow.style.display = 'none';
-        body.style.position = '';
-        body.style.overflow = 'visible';
+        ofChart()
     })
 }
 
@@ -128,32 +131,6 @@ statusFive.addEventListener('click', () => {
     chart(generateData('five'));
     tittleChart.innerHTML = 'Amazing Features';
 })
-
-function chart (chartStatistics) {
-    const options = {
-        seriesBarDistance: 15
-    };
-
-    const responsiveOptions = [
-        ['screen and (min-width: 641px) and (max-width: 1024px)', {
-            seriesBarDistance: 10,
-            axisX: {
-            labelInterpolationFnc: function (value) {
-                return value;
-            }
-        }
-    }],
-        ['screen and (max-width: 640px)', {
-            seriesBarDistance: 5,
-            axisX: {
-            labelInterpolationFnc: function (value) {
-                return value[0];
-            }
-        }
-    }]
-];
-    new Chartist.Bar('.ct-chart', chartStatistics, options, responsiveOptions);
-}
 
 buttom_top1.addEventListener('click', () => {
     buttom_slider_c1.style.backgroundColor = 'e74c3c';
@@ -261,10 +238,7 @@ inputEm.addEventListener('input', () => {InputValidator(Input)})
 
 document.addEventListener('keydown', function(event) {
     if(event.keyCode === 27) {
-        chart1.style.display = 'none';
-        overflow.style.display = 'none';
-        body.style.position = '';
-        body.style.overflow = 'visible';
+        ofChart()
     }
 })
 
