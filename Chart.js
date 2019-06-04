@@ -17,10 +17,12 @@ export function chart (chartStatistics) {
           axisX: {
           labelInterpolationFnc: function (value) {
               return value[0];
+
+              
           }
       }
   }]
-  
+
 ];
   new Chartist.Bar('.ct-chart', chartStatistics, options, responsiveOptions);
 }
