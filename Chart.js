@@ -20,6 +20,7 @@ export function chart (chartStatistics) {
           }
       }
   }]
+  
 ];
   new Chartist.Bar('.ct-chart', chartStatistics, options, responsiveOptions);
 }
