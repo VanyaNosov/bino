@@ -20,31 +20,42 @@ let inputNam = document.getElementById("Name");
 let inputEm = document.getElementById("Email");
 
 buttom_top1.addEventListener('click', () => {
-    buttom_slider_c1.style.backgroundColor = 'e74c3c';
-    buttom_slider_c2.style.backgroundColor = '#3e3e3e';
-    buttom_slider_c3.style.backgroundColor = '#3e3e3e';
-    vanyacha.style.transition =  0.8 + 's';
-    vanyacha.style.top = 0 + 'px';
-    vanyacha.style.top = 0 + 'px';
+    setStyle('buttom_top1', '0.8s', '0px');
 });
-
+  
 buttom_top2.addEventListener('click', () => {  
-    buttom_slider_c2.style.backgroundColor = 'e74c3c';
-    buttom_slider_c1.style.backgroundColor = '#3e3e3e';
-    buttom_slider_c3.style.backgroundColor = '#3e3e3e';
-    vanyacha.style.transition =  0.4 + 's';
-    vanyacha.style.top = 0 + 'px';  
-    vanyacha.style.top =  - 500 + 'px';
+    setStyle('buttom_top2', '0.4s', '-500px');
 });
-
+  
 buttom_top3.addEventListener('click', () => {
-    buttom_slider_c3.style.backgroundColor = 'e74c3c';
-    buttom_slider_c2.style.backgroundColor = '#3e3e3e';
-    buttom_slider_c1.style.backgroundColor = '#3e3e3e';
-    vanyacha.style.transition =  0.8 + 's';
-    vanyacha.style.top = 0 + 'px';  
-    vanyacha.style.top =  - 1000  + 'px';
+    setStyle('buttom_top3', '0.8s', '-1000px');
 });
+  
+const setStyle = (eventOnButton, transition, top) => {
+    switch(eventOnButton) {
+        case 'buttom_top3':
+            buttom_slider_c3.style.backgroundColor = 'e74c3c';
+            buttom_slider_c2.style.backgroundColor = '#3e3e3e';
+            buttom_slider_c1.style.backgroundColor = '#3e3e3e'; 
+            vanyacha.style.transition = transition;
+            vanyacha.style.top = top;
+            break;
+        case 'buttom_top2':
+            buttom_slider_c2.style.backgroundColor = 'e74c3c';
+            buttom_slider_c1.style.backgroundColor = '#3e3e3e';
+            buttom_slider_c3.style.backgroundColor = '#3e3e3e';
+            vanyacha.style.transition = transition;
+            vanyacha.style.top = top;
+            break;
+        case 'buttom_top1':
+            buttom_slider_c1.style.backgroundColor = 'e74c3c';
+            buttom_slider_c2.style.backgroundColor = '#3e3e3e';
+            buttom_slider_c3.style.backgroundColor = '#3e3e3e';
+            vanyacha.style.transition = transition;
+            vanyacha.style.top = top;
+            break;
+    }
+}
 
 slid_content_one.addEventListener('click', function () {
     OneSlid.style.backgroundColor = 'e74c3c';
