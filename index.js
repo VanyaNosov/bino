@@ -117,17 +117,13 @@ function InputValidator (e) {
     }else {
         DisabledButton.style.backgroundColor = '#C0C0C0';
     }
-    
-    if(ValidatorEmail(e.Email.value)) {
+  
+    if(ValidatorEmail(e.Email.value) && e.Name.selectionEnd > 5) {
         inputEm.style.borderBottom = '2px solid #32CD32';
-    }else {
-        inputEm.style.borderBottom = '2px solid #C0C0C0';
-    }
-
-    if(e.Name.selectionEnd > 5) {
         inputNam.style.borderBottom = '2px solid #32CD32';
     }else {
         inputNam.style.borderBottom = '2px solid #C0C0C0';
+        inputEm.style.borderBottom = '2px solid #C0C0C0';
     }
 }
 
