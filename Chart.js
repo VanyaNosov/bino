@@ -85,6 +85,14 @@ function modal() {
     })
 }
 
+const tittleObg = {
+    tittleChartOne: 'User Favourites',
+    tittleChartTwo: 'Posts Last 24 Hours',
+    tittleChartThree: 'Total Posts',
+    tittleChartFour: 'Campaigns',
+    tittleChartFive: 'Amazing Features'
+}
+
 function chartOnStyle () {
     body.style.overflow = 'hidden';
     body.style.zIndex = '100';
@@ -92,27 +100,27 @@ function chartOnStyle () {
 
 statusOne.addEventListener('click', () => {
     chart(generateData('one'));
-    tittleChart.innerHTML = 'User Favourites';
+    tittleChart.innerHTML = tittleObg.tittleChartOne;
 })
 
 statusTwo.addEventListener('click', () => {
     chart(generateData('two'));
-    tittleChart.innerHTML = 'Posts Last 24 Hours';
+    tittleChart.innerHTML = tittleObg.tittleChartTwo;
 })
 
 statusThree.addEventListener('click', () => {
     chart(generateData('three'));
-    tittleChart.innerHTML = 'Total Posts';
+    tittleChart.innerHTML = tittleObg.tittleChartThree;
 })
 
 statusFour.addEventListener('click', () => {
     chart(generateData('foure'));
-    tittleChart.innerHTML = 'Campaigns';
+    tittleChart.innerHTML = tittleObg.tittleChartFour;
 })
 
 statusFive.addEventListener('click', () => {
     chart(generateData('five'));
-    tittleChart.innerHTML = 'Amazing Features';
+    tittleChart.innerHTML = tittleObg.tittleChartFive;
 })
 
 function chart (chartStatistics) {
