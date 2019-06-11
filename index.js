@@ -85,7 +85,7 @@ slid_content_three.addEventListener('click', function () {
     ThreeSlid.style.backgroundColor = 'e74c3c';
     TwoSlid.style.backgroundColor = '#f4f5f9';
     OneSlid.style.backgroundColor = '#f4f5f9';
-    slidContentOne2.style.opacity = '0'
+    slidContentOne2.style.opacity = '0';
     slidContentThree.style.opacity = "1";
     slidContentTwo.style.opacity = "0";
     slidContentOne2.style.transition = 0 + 's';
