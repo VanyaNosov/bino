@@ -872,7 +872,7 @@ hr {
     margin-right: 0px;
 }
 
-#one_slid {
+#buttom_slid_one {
     background-color: #e74c3c;
 }
 
@@ -961,10 +961,15 @@ hr {
     display: inline-block;
     margin-right: 2px;
     margin-left: 0;
+    border-radius: 50%;
+    border: none;
+}
+
+.buttom_slid_one {
+    cursor: pointer;
     width: 12px;
     height: 12px;
     background-color: #f4f5f9;
-    border: none;
     border-radius: 50%;
 }
 
