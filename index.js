@@ -63,35 +63,35 @@ const setStyleTwo = (dotButton, image) => {
 
   for (let i = 0; i < keys.length; i++) {
     if (keys[i] === dotButton) {
-      buttonsSlidTwo[keys[i]].style.backgroundColor = 'red';
+    buttonsSlidTwo[keys[i]].style.backgroundColor = 'red';
     }
 
     if (keys[i] !== dotButton && groupDotButton.includes(keys[i])) {
-      buttonsSlidTwo[keys[i]].style.backgroundColor = '#f4f5f9';
+    buttonsSlidTwo[keys[i]].style.backgroundColor = '#f4f5f9';
     }
 
     if (keys[i] === image) {
-      buttonsSlidTwo[keys[i]].style.transition = '1';
-      buttonsSlidTwo[keys[i]].style.opacity = '1';
+    buttonsSlidTwo[keys[i]].style.transition = '1';
+    buttonsSlidTwo[keys[i]].style.opacity = '1';
     }
 
     if (keys[i] !== image && groupImage.includes(keys[i])) {
-      buttonsSlidTwo[keys[i]].style.opacity = '0';
-      buttonsSlidTwo[keys[i]].style.transition = '0';
+    buttonsSlidTwo[keys[i]].style.opacity = '0';
+    buttonsSlidTwo[keys[i]].style.transition = '0';
     }
   }
 }
 
 slid_content_one.addEventListener('click', () => {
-    setStyleTwo('buttom_slid_one', 'slidContentOne')
+  setStyleTwo('buttom_slid_one', 'slidContentOne')
 })
 
 slid_content_two.addEventListener('click', () => {
-    setStyleTwo('buttom_slid_two', 'slidContentTwo')
+  setStyleTwo('buttom_slid_two', 'slidContentTwo')
 })
 
 slid_content_three.addEventListener('click', () => {
-    setStyleTwo('buttom_slid_three', 'slidContentThree')
+  setStyleTwo('buttom_slid_three', 'slidContentThree')
 })
 
 // slid_content_one.addEventListener('click', function () {
@@ -134,42 +134,56 @@ const header_top = document.getElementById('header_top');
 
 window.addEventListener("scroll", () => vanya());
 function vanya () {
-    if (window.pageYOffset > 820) {
-        header_top.style.top = "0%"; 
-        header_top.style.opacity = "1";
-    }else {
-        header_top.style.top = "-92%"; 
-        header_top.style.opacity = "0";
-    }
+  if (window.pageYOffset > 820) {
+    header_top.style.top = "0%"; 
+    header_top.style.opacity = "1";
+  }else {
+    header_top.style.top = "-92%"; 
+    header_top.style.opacity = "0";
+  }
 }
 
 function ValidatorEmail (email) {
-    const reg = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
-    return reg.test(email);
+  const reg = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
+  return reg.test(email);
+}
+
+const validatorObj = {
+  Email: false,
+  Name: false,
 }
 
 function InputValidator (e) {
-    if(e.Name.selectionEnd > 5 && ValidatorEmail(e.Email.value)) {
-        DisabledButton.style.backgroundColor = 'red';
-    }else {
-        DisabledButton.style.backgroundColor = '#C0C0C0';
-    }
-    
-    if(ValidatorEmail(e.Email.value)) {
-        inputEm.style.borderBottom = '2px solid #32CD32';
-    }else {
-        inputEm.style.borderBottom = '2px solid #C0C0C0';
-    }
+  if(ValidatorEmail(e.Email.value)) {
+    inputEm.style.borderBottom = '2px solid #32CD32';
+    validatorObj.Email = true;
+  }else {
+    inputEm.style.borderBottom = '2px solid #C0C0C0';
+    validatorObj.Email = false;
+  }
 
-    if(e.Name.selectionEnd > 5) {
-        inputNam.style.borderBottom = '2px solid #32CD32';
-    }else {
-        inputNam.style.borderBottom = '2px solid #C0C0C0';
-    }
+  if(e.Name.selectionEnd > 5) {
+    inputNam.style.borderBottom = '2px solid #32CD32';
+    validatorObj.Name = true;
+  }else {
+    inputNam.style.borderBottom = '2px solid #C0C0C0';
+    validatorObj.Name = false;
+  }
+  return validatorObj.Email, validatorObj.Name;
 }
 
-inputNam.addEventListener('input', () => {InputValidator(Input)})
-inputEm.addEventListener('input', () => {InputValidator(Input)})
+function prv () {
+  if(validatorObj.Email && validatorObj.Name === true) {
+    DisabledButton.style.backgroundColor = 'red';
+  }else {
+    DisabledButton.style.backgroundColor = '#C0C0C0';
+  }
+  console.log(validatorObj.Email)
+  console.log(validatorObj.Name)
+}
+
+inputNam.addEventListener('input', () => {InputValidator(Input), prv()})
+inputEm.addEventListener('input', () => {InputValidator(Input), prv()})
 
 
 
