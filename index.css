@@ -99,20 +99,45 @@ body {
     text-align: center;
 }
 
-.text_slid_block_one {
+/* .text_slid_block_one {
     position: absolute;
     left: 25%;
     top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.6s;
+} */
+
+#slid_text_one {
+    left: 25%;
+    top: 50%;
+}
+
+
+#slid_text_one_two {
+    left: -100%;
+    top: 44.5%;
+}
+
+#slid_text_two {
+    left: 100%;
+    top: 44.5%;
+}
+
+#slid_text_two_two {
+    left: -100%;
+    top: 44.5%;
+}
+
+.text_slid_block{
+    position: absolute;
     transform: translate(-50%, -50%);
     transition: 0.6s;
 }
 
 .text_slid_block_two {
     position: absolute;
-    left: 100%;
-    top: 44.5%;
     transform: translate(-50%, -50%);
-    transition: 0.6s;
+    transition: 0.6s;   
 }
 
 .slid_button_block {
