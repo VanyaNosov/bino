@@ -94,42 +94,6 @@ slid_content_three.addEventListener('click', () => {
   setStyleTwo('buttom_slid_three', 'slidContentThree')
 })
 
-// slid_content_one.addEventListener('click', function () {
-//     OneSlid.style.backgroundColor = 'e74c3c';
-//     TwoSlid.style.backgroundColor = '#f4f5f9';
-//     ThreeSlid.style.backgroundColor = '#f4f5f9';
-//     slidContentOne2.style.opacity = "1";
-//     slidContentTwo.style.opacity = "0";
-//     slidContentThree.style.opacity = "0";
-//     slidContentOne2.style.transition = 1 + 's';
-//     slidContentTwo.style.transition = 0 + 's';
-//     slidContentThree.style.transition = 0 + 's';
-// }); 
-         
-// slid_content_two.addEventListener('click', function () {
-//     TwoSlid.style.backgroundColor = 'e74c3c';
-//     OneSlid.style.backgroundColor = '#f4f5f9';
-//     ThreeSlid.style.backgroundColor = '#f4f5f9';
-//     slidContentOne2.style.opacity = '0'
-//     slidContentThree.style.opacity = "0";
-//     slidContentTwo.style.opacity = "1";
-//     slidContentOne2.style.transition = 0 + 's';
-//     slidContentTwo.style.transition = 1 + 's';
-//     slidContentThree.style.transition = 0 + 's';
-// });
-
-// slid_content_three.addEventListener('click', function () { 
-//     ThreeSlid.style.backgroundColor = 'e74c3c';
-//     TwoSlid.style.backgroundColor = '#f4f5f9';
-//     OneSlid.style.backgroundColor = '#f4f5f9';
-//     slidContentOne2.style.opacity = '0'
-//     slidContentThree.style.opacity = "1";
-//     slidContentTwo.style.opacity = "0";
-//     slidContentOne2.style.transition = 0 + 's';
-//     slidContentTwo.style.transition = 0 + 's';
-//     slidContentThree.style.transition = 1 + 's';
-// });
-
 const header_top = document.getElementById('header_top');
 
 window.addEventListener("scroll", () => vanya());
@@ -169,21 +133,19 @@ function InputValidator (e) {
     inputNam.style.borderBottom = '2px solid #C0C0C0';
     validatorObj.Name = false;
   }
-  return validatorObj.Email, validatorObj.Name;
+  prv()
 }
 
 function prv () {
-  if(validatorObj.Email && validatorObj.Name === true) {
+  if(validatorObj.Email && validatorObj.Name) {
     DisabledButton.style.backgroundColor = 'red';
   }else {
     DisabledButton.style.backgroundColor = '#C0C0C0';
   }
-  console.log(validatorObj.Email)
-  console.log(validatorObj.Name)
 }
 
-inputNam.addEventListener('input', () => {InputValidator(Input), prv()})
-inputEm.addEventListener('input', () => {InputValidator(Input), prv()})
+inputNam.addEventListener('input', () => {InputValidator(Input)})
+inputEm.addEventListener('input', () => {InputValidator(Input)})
 
 
 
