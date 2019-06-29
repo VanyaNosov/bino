@@ -68,6 +68,7 @@ const setStyleTwo = (dotButton, image) => {
 
     if (keys[i] !== dotButton && groupDotButton.includes(keys[i])) {
     buttonsSlidTwo[keys[i]].style.backgroundColor = '#f4f5f9';
+    console.log(keys[i] === groupDotButton.includes(keys[i]))
     }
 
     if (keys[i] === image) {
