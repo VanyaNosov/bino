@@ -1,7 +1,8 @@
 const textSlidBlockOne = document.getElementById('slid_text_one');
 const textSlidBlockTwo = document.getElementById('slid_text_two');
-const textSlidBlockOneTwo = document.getElementById('slid_text_one_two');
-const textSlidBlockTwoTwo = document.getElementById('slid_text_two_two');
+const slidContent = document.getElementById('slid_content');
+const textSlidBlockOneClone = textSlidBlockOne.cloneNode(textSlidBlockTwo);
+const insertBefore = slidContent.insertBefore(textSlidBlockOneClone, textSlidBlockOne);
 const slidBottomRight = document.getElementById('slid_button_block_right');
 let slid = false;
 slidBottomRight.addEventListener('click', () => {
