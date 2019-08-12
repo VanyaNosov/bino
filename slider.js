@@ -12,22 +12,23 @@ let slid = false;
 function slidStarter(ONE) {
   if(ONE === 1) {
     slidContent.insertBefore(textSlidBlockTwo, textSlidBlockOne);
-  }else {
-    console.log('2')
+  }
+  if(ONE === 2) {  
+      slidContent.insertBefore(textSlidBlockOne, textSlidBlockTwo);
   }
 }
 
 slidBottomRight.addEventListener('click', () => {
       if(!slid) {
-      textSlidBlockOne.style.left = '-100%';
-      textSlidBlockTwo.style.left = '25%'; 
-      slidStarter(1)
-      slid = true;
+        slidStarter(1)
+        textSlidBlockOne.style.left = '-100%';
+        textSlidBlockTwo.style.left = '25%'; 
+        slid = true;
       return;
     }else {
-      textSlidBlockTwo.style.left = '100%';
-      textSlidBlockOne.style.left = '25%'; 
-      slidStarter(2)
+        slidStarter(2)
+        textSlidBlockTwo.style.left = '100%';
+        textSlidBlockOne.style.left = '25%'; 
         slid = false;
         return;
     }
