@@ -110,22 +110,31 @@ body {
 #slid_text_one {
     left: 25%;
     top: 50%;
+    transition: 0.6s;
 }
 
 
 #slid_text_one_two {
     left: -100%;
     top: 44.5%;
+    transition: 0.6s;
 }
 
 #slid_text_two {
-    left: 100%;
+    left: 75%;
     top: 44.5%;
+    transition: 0.6s;
 }
 
-#slid_text_two_two {
-    left: -100%;
+#slid_text_two-2 {
+    left: -75%;
     top: 44.5%;
+    transition: 0.6s;
+}
+
+#slid_text_one_clone {
+    left: -75%;
+    top: 50%;
 }
 
 .text_slid_block{
@@ -139,6 +148,12 @@ body {
     transform: translate(-50%, -50%);
     transition: 0.6s;   
 }
+
+/* #slid_text_two-2 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: 0.6s;  
+} */
 
 .slid_button_block {
     position: absolute;
@@ -168,7 +183,7 @@ body {
 }
 
 #slid_button_block_right {
-    right: 50%;
+    right: 0%;
 }
 
 .p_slider {
