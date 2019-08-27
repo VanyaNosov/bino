@@ -96,7 +96,7 @@ body {
     width: 200%;
     height: 70%;
     position: relative;
-    text-align: center;
+    /* text-align: center; */
 }
 
 /* .text_slid_block_one {
@@ -137,10 +137,15 @@ body {
     top: 50%;
 }
 
-.text_slid_block{
-    position: absolute;
-    transform: translate(-50%, -50%);
+.text_slid_block {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    text-align: center;
     transition: 0.6s;
+    /* position: absolute;
+    transform: translate(-50%, -50%);
+    transition: 0.6s; */
 }
 
 .text_slid_block_two {

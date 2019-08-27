@@ -3,17 +3,7 @@ let textSlidBlockTwo = document.getElementById('slid_text_two');
 const slidContent = document.getElementById('slid_content');
 const slidBottomLeft = document.getElementById('slid_button_block_left');
 const slidBottomRight = document.getElementById('slid_button_block_right');
-const textSlidBlockOneClone = textSlidBlockOne.cloneNode(true);
-const textSlidBlockTwoClone = textSlidBlockTwo.cloneNode(true);
-const addItemOne = slidContent.appendChild(textSlidBlockOneClone)
-const addItemTwo = slidContent.appendChild(textSlidBlockTwoClone)
 let slid = false;
-addItemOne.id = 'slidOneClone';
-addItemTwo.id = 'slidTwoClone';
-addItemOne.style.left = '-75%';
-addItemOne.style.top = '50%'
-addItemTwo.style.left = '-75%';
-addItemTwo.style.top = '50%'
 function slidStarterRight(ONE) {
   const slidArray = document.getElementsByClassName('text_slid_block');
   if(ONE === 1) {
@@ -24,65 +14,61 @@ function slidStarterRight(ONE) {
   }
 }
 
-function slidStarterLeft(ONE) {
-  const slidArray = document.getElementsByClassName('text_slid_block');
-  if(ONE === 3) {
-    slidContent.insertBefore(addItemTwo, slidArray[0]);
-  }
-
-  if(ONE === 4) {  
-    slidContent.insertBefore(addItemOne, slidArray[0]);
-  }
-}
-
-function delOneContainer () {
-  slidContent.removeChild(addItemOne)
-  slidContent.removeChild(addItemTwo)
-}
-
-function delTwoContainer () {
-  slidContent.removeChild(textSlidBlockOne)
-  slidContent.removeChild(textSlidBlockTwo)
-}
-
-
 slidBottomRight.addEventListener('click', () => {
   if(!slid) {
     slidStarterRight(1)
-    // delTwoContainer ()
-    // deoTwo()
-    textSlidBlockOne.style.left = '-100%';
-    textSlidBlockTwo.style.left = '25%'; 
+
     slid = true;
     return;
   }else {
     slidStarterRight(2)
-    // delTwoContainer ()
-    // deoTwo()
-    textSlidBlockTwo.style.left = '-100%';
-    textSlidBlockOne.style.left = '25%'; 
+
     slid = false;
     return;
   }
 })
 
-slidBottomLeft.addEventListener('click', () => {
-  if(!slid) {
-    slidStarterLeft(3)
-    // deoOne()
-    addItemOne.style.left = '100%';
-    addItemTwo.style.left = '25%'; 
-    slid = true;
-    return;
-  }else {
-    slidStarterLeft(4)
-    // deoOne()
-    addItemTwo.style.left = '100%';
-    addItemOne.style.left = '25%'; 
-    slid = false;
-    return;
-  }
-})
+// function addToEnd () {
+//   slidContent.insertBefore(textSlidBlockTwo, slidArray[1]);
+// }
+
+
+// function slidStarterLeft(ONE) {
+//   const slidArray = document.getElementsByClassName('text_slid_block');
+//   if(ONE === 3) {
+//     slidContent.insertBefore(addItemTwo, slidArray[0]);
+//   }
+
+//   if(ONE === 4) {  
+//     slidContent.insertBefore(addItemOne, slidArray[0]);
+//   }
+// }
+
+// function delOneContainer () {
+//   slidContent.removeChild(addItemOne)
+//   slidContent.removeChild(addItemTwo)
+// }
+
+// function delTwoContainer () {
+//   slidContent.removeChild(textSlidBlockOne)
+//   slidContent.removeChild(textSlidBlockTwo)
+// }
+
+// slidBottomLeft.addEventListener('click', () => {
+//   if(!slid) {
+//     slidStarterLeft(3)
+//     // deoOne()
+ 
+//     slid = true;
+//     return;
+//   }else {
+//     slidStarterLeft(4)
+//     // deoOne()
+   
+//     slid = false;
+//     return;
+//   }
+// })
 
 
 // function delTwoContainer () {
