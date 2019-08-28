@@ -93,7 +93,7 @@ body {
 }
 
 .slider_content {
-    width: 200%;
+    width: 100%;
     height: 70%;
     position: relative;
     /* text-align: center; */
@@ -108,11 +108,10 @@ body {
 } */
 
 #slid_text_one {
-    left: 25%;
-    top: 50%;
+    margin: 0px 0px 0px 50%;
+    transform: translate(-50%);
     transition: 0.6s;
 }
-
 
 #slid_text_one_two {
     left: -100%;
@@ -121,8 +120,7 @@ body {
 }
 
 #slid_text_two {
-    left: 75%;
-    top: 44.5%;
+    margin-left: -200%;
     transition: 0.6s;
 }
 
@@ -139,7 +137,7 @@ body {
 
 .text_slid_block {
     display: inline-block;
-    width: 50%;
+    white-space: nowrap;
     vertical-align: top;
     text-align: center;
     transition: 0.6s;
@@ -228,6 +226,7 @@ hr {
     margin-top: 47px;
     font-size: 14px;
     color: #cbc6c0;
+    white-space: normal;
     line-height: 24px;
 }
 
