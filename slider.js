@@ -21,12 +21,35 @@ function lastRight(last) {
   }
 }
 
-function deleteLast (last) {
-  const slidArray = document.getElementsByClassName('text_slid_block');
-  if(last === 1) {
-    slidContent.removeChild(textSlidBlockOne);
+slidBottomRight.addEventListener('click', () => {
+  if(!slid) {
+    slidStarterRight(1)
+    lastRight(1);
+    slid = true;
+    return;
+  }else {
+    slidStarterRight(2)
+    lastRight(1);
+    slid = false;
+    return;
   }
-}
+})
+
+    // lastRight(1)
+    // deleteLast(1)
+    // lastAndStarterRight(1, 2)
+
+  // deleteLast(1)
+    // lastAndStarterRight(2, 2)
+    // lastRight(1)
+
+
+// function deleteLast (last) {
+//   const slidArray = document.getElementsByClassName('text_slid_block');
+//   if(last === 1) {
+//     slidContent.removeChild(textSlidBlockOne);
+//   }
+// }
 
 // function lastAndStarterRight(name, position) {
 //   const slidArray = document.getElementsByClassName('text_slid_block');
@@ -38,23 +61,6 @@ function deleteLast (last) {
 //   }
 // }
 
-slidBottomRight.addEventListener('click', () => {
-  if(!slid) {
-    slidStarterRight(1)
-    lastRight(1)
-    deleteLast(1)
-    // lastAndStarterRight(1, 2)
-    slid = true;
-    return;
-  }else {
-    slidStarterRight(2)
-    deleteLast(1)
-    // lastAndStarterRight(2, 2)
-    lastRight(1)
-    slid = false;
-    return;
-  }
-})
 
 // function styleOne () {
 //   const slidArray = document.getElementsByClassName('text_slid_block');

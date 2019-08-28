@@ -94,6 +94,7 @@ body {
 
 .slider_content {
     width: 100%;
+    white-space: nowrap;
     height: 70%;
     position: relative;
     /* text-align: center; */
@@ -108,8 +109,6 @@ body {
 } */
 
 #slid_text_one {
-    margin: 0px 0px 0px 50%;
-    transform: translate(-50%);
     transition: 0.6s;
 }
 
@@ -120,7 +119,6 @@ body {
 }
 
 #slid_text_two {
-    margin-left: -200%;
     transition: 0.6s;
 }
 
@@ -136,8 +134,8 @@ body {
 }
 
 .text_slid_block {
+    width: 100%;
     display: inline-block;
-    white-space: nowrap;
     vertical-align: top;
     text-align: center;
     transition: 0.6s;
