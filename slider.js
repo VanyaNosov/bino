@@ -21,6 +21,15 @@ function lastRight(last) {
   }
 }
 
+function leftElem () {
+  const cloneOne = textSlidBlockTwo.cloneNode(true);
+  const slidArray = document.getElementsByClassName('text_slid_block');
+  slidContent.insertBefore(cloneOne, slidArray[0]);
+  slidArray[0].style.margin = '0 0 0 -100%';
+}
+
+leftElem ()
+
 slidBottomRight.addEventListener('click', () => {
   if(!slid) {
     slidStarterRight(1)
