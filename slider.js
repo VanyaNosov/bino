@@ -24,7 +24,7 @@ function lastRight(last) {
 function deleteLast (last) {
   const slidArray = document.getElementsByClassName('text_slid_block');
   if(last === 1) {
-    slidContent.removeChild(slidArray[2]);
+    slidContent.removeChild(textSlidBlockOne);
   }
 }
 
