@@ -100,6 +100,10 @@ body {
     /* text-align: center; */
 }
 
+/* .slider_content:first-child {
+    margin-left: -100%;
+} */
+
 /* .text_slid_block_one {
     position: absolute;
     left: 25%;
