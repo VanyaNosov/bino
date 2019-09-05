@@ -20,7 +20,7 @@ function leftElem () {
   const cloneOne = textSlidBlockTwo.cloneNode(true);
   const slidArray = document.getElementsByClassName('text_slid_block');
   slidContent.insertBefore(cloneOne, slidArray[0]);
-  slidArray[0].style.margin = '0 0 0 -100%';
+  // slidArray[0].style.margin = '0 0 0 -100%';
 }
 
 leftElem ()
@@ -48,22 +48,22 @@ function some (direction, slide) {
   const slidArray = document.getElementsByClassName('text_slid_block');
   const cloneOne = slide.cloneNode(true);
   if(direction === 'back') {
-    slidContent.removeChild(slidArray[slidArray.length - 1])
-    slidContent.insertBefore(cloneOne, slidArray[0]);
-  }else {
     slidContent.removeChild(slidArray[0]);
     slidContent.appendChild(cloneOne);
+  }else {
+    slidContent.removeChild(slidArray[slidArray.length - 1])
+    slidContent.insertBefore(cloneOne, slidArray[0]);
   }
 }
 
 slidBottomRight.addEventListener('click', () => {
   if(!slid) {
     some('back', textSlidBlockOne);
-    slid = true;
+    slid = false;
     return;
   }else {
     some('up', textSlidBlockOne);
-    slid = false;
+    slid = true;
     return;
   }
 })

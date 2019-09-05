@@ -148,6 +148,15 @@ body {
     transition: 0.6s; */
 }
 
+/* .text_slid_block:nth-child(2) {
+    margin-left: -100%;
+} */
+
+.text_slid_block:first-child {
+    margin-left: -100%;
+}
+
+
 .text_slid_block_two {
     position: absolute;
     transform: translate(-50%, -50%);
