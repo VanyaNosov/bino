@@ -152,9 +152,9 @@ body {
     margin-left: -100%;
 } */
 
-.text_slid_block:first-child {
+/* .text_slid_block:first-child {
     margin-left: -100%;
-}
+} */
 
 
 .text_slid_block_two {
@@ -1803,5 +1803,9 @@ hr {
     cursor: pointer;
     display: inline-block;
     margin-right: 10px;
+}
+
+.animation {
+    transition-duration: 1s
 }
 
