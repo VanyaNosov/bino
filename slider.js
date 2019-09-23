@@ -6,6 +6,7 @@ let textSlidBlockfive = document.getElementById('slid_text_five ');
 const slidContent = document.getElementById('slid_content');
 const slidBottomLeft = document.getElementById('slid_button_block_left');
 const slidBottomRight = document.getElementById('slid_button_block_right');
+const index = 0;
 
 // function leftElem () {
 //   const cloneOne = textSlidBlockTwo.cloneNode(true);
@@ -37,41 +38,46 @@ const slidBottomRight = document.getElementById('slid_button_block_right');
 
 // leftElem ()
 
-function test (direction) {
+
+
+function funcDistributorOne (direction) {
   const slidArray = document.getElementsByClassName('text_slid_block');
   let currentItem = slidArray[0];
-  for (let i = 0; i < slidArray.length; i += 1) {
-    if (slidArray[i] === currentItem && direction === 'right') {
-      if (i === slidArray.length - 1) {
+    if (slidArray[0] === currentItem && direction === 'right') {
+      if (index === slidArray.length - 1) {
         slidContent.insertBefore(currentItem, slidArray[0]);
-        currentItem = slidArray[i];
+        currentItem = slidArray[0];
         return;
       }
-      slidContent.insertBefore(currentItem, slidArray[slidArray[i] + 1]);
-      currentItem = slidArray[i];
+      slidContent.insertBefore(currentItem, slidArray[slidArray[0] + 1]);
+      currentItem = slidArray[0];
       return;
     }
-    if (slidArray[i] === currentItem && direction === 'left') {
-      if (i === 0) {
-        slidContent.insertBefore(slidArray[slidArray.length - 1], currentItem);
-        currentItem = slidArray[slidArray.length - 1];
-        return;
-      }
-      slidContent.insertBefore(currentItem, slidArray[slidArray[i] - 1]);
-      currentItem = slidArray[i];
+}
+
+function funcDistributorTwo (direction) {
+  const slidArray = document.getElementsByClassName('text_slid_block');
+  let currentItem = slidArray[0];
+  if (slidArray[0] === currentItem && direction === 'left') {
+    if (index === 0) {
+      slidContent.insertBefore(slidArray[slidArray.length - 1], currentItem);
+      currentItem = slidArray[slidArray.length - 1];
       return;
     }
+    slidContent.insertBefore(currentItem, slidArray[slidArray[0] - 1]);
+    currentItem = slidArray[0];
+    return;
   }
 }
 
 slidBottomRight.addEventListener('click', () => {
   // leftMovement('back', textSlidBlockOne);
-  test('right')
+  funcDistributorOne('right')
 })
 
 slidBottomLeft.addEventListener('click', () => {
   // leftMovement('back', textSlidBlockOne);
-  test('left')
+  funcDistributorTwo('left')
 });
 
 
