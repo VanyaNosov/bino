@@ -152,10 +152,9 @@ body {
     margin-left: -100%;
 } */
 
-/* .text_slid_block:first-child {
+.text_slid_block:first-child {
     margin-left: -100%;
-} */
-
+}
 
 .text_slid_block_two {
     position: absolute;
