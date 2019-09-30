@@ -6,8 +6,9 @@ let textSlidBlockfive = document.getElementById('slid_text_five ');
 const slidContent = document.getElementById('slid_content');
 const slidBottomLeft = document.getElementById('slid_button_block_left');
 const slidBottomRight = document.getElementById('slid_button_block_right');
+let slidsCollection = [...document.getElementsByClassName('text_slid_block')];
 let index = 0;
-
+let clone = slidsCollection.slice();
 function startState () {
   let slidsCollection = [...document.getElementsByClassName('text_slid_block')];
   const cloneOne = slidsCollection[2].cloneNode(true)
@@ -56,7 +57,7 @@ function leftMovement (direction, slide) {
 }
 
 function funcDistributorOne (direction) {
-  const slidArray = document.getElementsByClassName('text_slid_block');
+  const slidArray = [...document.getElementsByClassName('text_slid_block')];
   let currentItem = slidArray[0];
   if (slidArray[0] === currentItem && direction === 'right') {
     if (index === slidArray.length - 1) {
@@ -83,7 +84,7 @@ function some (direction) {
 }
 
 function funcDistributorTwo (direction) {
-  const slidArray = document.getElementsByClassName('text_slid_block');
+  const slidArray = [...document.getElementsByClassName('text_slid_block')];
   let currentItem = slidArray[0];
   if (slidArray[0] === currentItem && direction === 'left') {
     if (index === 0) {
