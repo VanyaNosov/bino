@@ -6,42 +6,19 @@ let textSlidBlockfive = document.getElementById('slid_text_five ');
 const slidContent = document.getElementById('slid_content');
 const slidBottomLeft = document.getElementById('slid_button_block_left');
 const slidBottomRight = document.getElementById('slid_button_block_right');
-let slidsCollection = [...document.getElementsByClassName('text_slid_block')];
+const slidsCollection = [...document.getElementsByClassName('text_slid_block')];
 let index = 0;
-let clone = slidsCollection.slice();
+let nextIndex = 1;
 function startState () {
-  let slidsCollection = [...document.getElementsByClassName('text_slid_block')];
-  const cloneOne = slidsCollection[2].cloneNode(true)
-  const cloneThree = slidsCollection[1].cloneNode(true)
-  const cloneTwo = slidsCollection[5].cloneNode(true)
+  const cloneOne = slidsCollection[1].cloneNode(true)
+  const cloneThree = slidsCollection[0].cloneNode(true)
+  const cloneTwo = slidsCollection[4].cloneNode(true)
   for(let i = 0; i < slidsCollection.length; i++) {
     slidContent.removeChild(slidsCollection[i]);
   }
   slidContent.appendChild(cloneOne)
   slidContent.insertBefore(cloneTwo, cloneOne)
   slidContent.insertBefore(cloneThree, cloneOne)
-}
-
-function addingFuncOne () {
-  const slidArray = document.getElementsByClassName('text_slid_block');
-  let currentItem = slidArray[0];
-  slidContent.insertBefore(currentItem, slidArray[slidArray[0] + 1]);
-  currentItem = slidArray[0];
-  return;
-}
-
-function addingFuncTwo () {
-  const slidArray = document.getElementsByClassName('text_slid_block');
-  let currentItem = slidArray[0];
-  slidContent.insertBefore(currentItem, slidArray[slidArray[0] - 1]);
-  currentItem = slidArray[0];
-  return;
-}
-
-function leftElem () {
-  const cloneOne = textSlidBlockTwo.cloneNode(true);
-  const slidArray = document.getElementsByClassName('text_slid_block');
-  slidContent.insertBefore(cloneOne, slidArray[0]);
 }
 
 function leftMovement (direction, slide) {
@@ -56,26 +33,21 @@ function leftMovement (direction, slide) {
   }
 }
 
-function funcDistributorOne (direction) {
-  const slidArray = [...document.getElementsByClassName('text_slid_block')];
-  let currentItem = slidArray[0];
-  if (slidArray[0] === currentItem && direction === 'right') {
-    if (index === slidArray.length - 1) {
-      slidContent.insertBefore(currentItem, slidArray[0]);
-      currentItem = slidArray[0];
-      return;
-    }
-    addingFuncOne ()
-  }
-}
-
+// function some (direction) {
+//   const slidArray = document.getElementsByClassName('text_slid_block');
+//   if (slidArray[1].id === 'slid_text_one' && direction === 'left') {
+//     slidArray[1] = slidArray[4];
+//     console.log('1')
+//   }else {
+//     console.log('0')
+//   }
+// }
 function some (direction) {
   if (index === 0 && direction === 'left') {
     index = 4;
   } else if (direction === 'left') {
     index = index - 1
   }
-
   if (index === 4 && direction === 'right') { 
     index = 0
   } else if (direction === 'right') {
@@ -83,33 +55,32 @@ function some (direction) {
   }
 }
 
-function funcDistributorTwo (direction) {
-  const slidArray = [...document.getElementsByClassName('text_slid_block')];
-  let currentItem = slidArray[0];
-  if (slidArray[0] === currentItem && direction === 'left') {
-    if (index === 0) {
-      slidContent.insertBefore(slidArray[slidArray.length - 1], currentItem);
-      currentItem = slidArray[slidArray.length - 1];
-      return;
-    }
-    addingFuncTwo ()
+function someTwo (direction) {
+  if (nextIndex === 0 && direction === 'left') {
+    nextIndex = 4;
+  } else if (direction === 'left') {
+    nextIndex = nextIndex - 1
   }
+  if (index === 4 && direction === 'right') { 
+    nextIndex = 0
+  } else if (direction === 'right') {
+    nextIndex = nextIndex + 1;
+  }
+  return nextIndex;
 }
 
-leftElem ()
 startState ()
 
 slidBottomRight.addEventListener('click', () => {
-  funcDistributorOne('right')
   some ('right')
+  const needPutIndex = someTwo('right');
+  console.log(index,needPutIndex)
 })
 
 slidBottomLeft.addEventListener('click', () => {
-  funcDistributorTwo('left')
   some ('left')
+  const needPutIndex = someTwo('right');
+  console.log(index,needPutIndex)
 });
-
-
-
 
 
