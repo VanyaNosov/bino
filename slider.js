@@ -13,15 +13,13 @@ function startState () {
   const cloneOne = slidsCollection[1].cloneNode(true)
   const cloneThree = slidsCollection[0].cloneNode(true)
   const cloneTwo = slidsCollection[4].cloneNode(true)
-  for(let i = 0; i < slidsCollection.length; i++) {
-    slidContent.removeChild(slidsCollection[i]);
-  }
+  slidContent.innerHTML = '';
   slidContent.appendChild(cloneOne)
   slidContent.insertBefore(cloneTwo, cloneOne)
   slidContent.insertBefore(cloneThree, cloneOne)
 }
 
-function leftMovement (direction, slide) {
+function slideDistribution (direction, slide) {
   const slidArray = document.getElementsByClassName('text_slid_block');
   const cloneOne = slide.cloneNode(true);
   if(direction === 'back') {
@@ -33,15 +31,6 @@ function leftMovement (direction, slide) {
   }
 }
 
-// function some (direction) {
-//   const slidArray = document.getElementsByClassName('text_slid_block');
-//   if (slidArray[1].id === 'slid_text_one' && direction === 'left') {
-//     slidArray[1] = slidArray[4];
-//     console.log('1')
-//   }else {
-//     console.log('0')
-//   }
-// }
 function some (direction) {
   if (index === 0 && direction === 'left') {
     index = 4;
@@ -56,31 +45,39 @@ function some (direction) {
 }
 
 function someTwo (direction) {
-  if (nextIndex === 0 && direction === 'left') {
+  if (index === 0 && direction === 'left') {
     nextIndex = 4;
   } else if (direction === 'left') {
-    nextIndex = nextIndex - 1
+    nextIndex = index - 1
   }
   if (index === 4 && direction === 'right') { 
     nextIndex = 0
   } else if (direction === 'right') {
-    nextIndex = nextIndex + 1;
+    nextIndex = index + 1;
   }
   return nextIndex;
 }
 
 startState ()
 
+function globalAmin (direction) {
+  if(direction === 'right') {
+    some ('right')
+    const needPutIndex = someTwo('right');
+    slideDistribution ('back', slidsCollection[needPutIndex])
+  }else {
+    some ('left')
+    const needPutIndex = someTwo('left');
+    slideDistribution ('up', slidsCollection[needPutIndex])
+  }
+}
+
 slidBottomRight.addEventListener('click', () => {
-  some ('right')
-  const needPutIndex = someTwo('right');
-  console.log(index,needPutIndex)
+  globalAmin('right')
 })
 
 slidBottomLeft.addEventListener('click', () => {
-  some ('left')
-  const needPutIndex = someTwo('right');
-  console.log(index,needPutIndex)
+  globalAmin('left')
 });
 
 
