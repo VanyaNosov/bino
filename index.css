@@ -32,6 +32,7 @@ body {
     background-size: cover;
     background-position: 50% 50%;
     height: calc(100vh - 10px);
+    overflow: hidden;
 }
 
 .logo {
@@ -93,11 +94,109 @@ body {
 
 .slider_content {
     width: 100%;
+    white-space: nowrap;
+    height: 70%;
+    position: relative;
+    /* text-align: center; */
+}
+
+/* .slider_content:first-child {
+    margin-left: -100%;
+} */
+
+/* .text_slid_block_one {
     position: absolute;
-    left: 50%;
+    left: 25%;
     top: 50%;
     transform: translate(-50%, -50%);
+    transition: 0.6s;
+} */
+
+#slid_text_one {
+    transition: 0.6s;
+}
+
+#slid_text_one_two {
+    left: -100%;
+    top: 44.5%;
+    transition: 0.6s;
+}
+
+#slid_text_two {
+    transition: 0.6s;
+}
+
+#slid_text_two-2 {
+    left: -75%;
+    top: 44.5%;
+    transition: 0.6s;
+}
+
+#slid_text_one_clone {
+    left: -75%;
+    top: 50%;
+}
+
+.text_slid_block {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
     text-align: center;
+    transition: 0.6s;
+    /* position: absolute;
+    transform: translate(-50%, -50%);
+    transition: 0.6s; */
+}
+
+/* .text_slid_block:nth-child(2) {
+    margin-left: -100%;
+} */
+
+.text_slid_block:first-child {
+    margin-left: -100%;
+}
+
+.text_slid_block_two {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: 0.6s;   
+}
+
+/* #slid_text_two-2 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: 0.6s;  
+} */
+
+.slid_button_block {
+    position: absolute;
+    height: 100%;
+    width: 100px; 
+    cursor: pointer;
+    top: 0;
+}
+
+.slid_button_block:hover .slid_button {
+    background-color: #e74c3c;
+}
+
+.slid_button {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background-color: #999;
+    transition: 0.6s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#slid_button_block_left {
+    left: 0;
+}
+
+#slid_button_block_right {
+    right: 0%;
 }
 
 .p_slider {
@@ -110,6 +209,7 @@ body {
     color: #f4f5f9;
     font-size: 72px;
     margin-bottom: 48px;
+    white-space: nowrap;
 }
 
 .pointer {
@@ -136,6 +236,7 @@ hr {
     margin-top: 47px;
     font-size: 14px;
     color: #cbc6c0;
+    white-space: normal;
     line-height: 24px;
 }
 
@@ -999,6 +1100,7 @@ hr {
     background: rgba(0, 0, 0, 0.8);
     position: absolute;
     top: 0;
+    cursor: pointer;
 }
 
 .chart_block {
@@ -1705,5 +1807,9 @@ hr {
     cursor: pointer;
     display: inline-block;
     margin-right: 10px;
+}
+
+.animation {
+    transition-duration: 1s
 }
 
